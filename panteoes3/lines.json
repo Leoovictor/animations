@@ -1,0 +1,170 @@
+[
+ {
+  "id": "s01",
+  "text": "Vocês escolheram o portal congelado. E, assim que eles chegaram, um martelo caiu do céu bem na frente de Zeus!",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s02",
+  "text": "Depois de encontrarem os guardiões da floresta, Zeus, Xangô e Tupã atravessaram o portal levando o fragmento misterioso.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s03",
+  "text": "Mas o frio daquele lugar era tão forte que a barba de Zeus congelou em segundos.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s04",
+  "text": "Montanhas de gelo, luzes dançando no céu e um silêncio que parecia esconder alguma coisa.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s05",
+  "text": "Então, o martelo levantou do chão e voltou voando para a mão do seu dono.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s06",
+  "text": "Era Thor, o deus do trovão das histórias nórdicas. E ele não parecia nada feliz com a visita.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s07a",
+  "text": "Zeus cruzou os braços e disse:",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s07b",
+  "text": "“Quatro senhores dos trovões? Isso já está virando campeonato!”",
+  "rate": "+12%",
+  "pitch": "+8Hz",
+  "say": "Quatro senhores dos trovões?! Isso já está virando campeonato!"
+ },
+ {
+  "id": "s08",
+  "text": "Thor ergueu o martelo. Mas, antes do primeiro golpe, Tupã mostrou o fragmento.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s09",
+  "text": "Thor reconheceu o símbolo na hora. Ele estava gravado na ponte que liga os mundos.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s10",
+  "text": "O grupo correu até a ponte de arco-íris, onde um guardião vigiava todos os reinos.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s11",
+  "text": "Era Heimdall, o guardião que, nessas histórias, consegue ver e ouvir quase tudo.",
+  "rate": "+24%",
+  "pitch": "+3Hz",
+  "say": "Era Rêimdal, o guardião que, nessas histórias, consegue ver e ouvir quase tudo.",
+  "asr": "Era Heimdall, o guardião que, nessas histórias, consegue ver e ouvir quase tudo."
+ },
+ {
+  "id": "s12a",
+  "text": "Ele olhou para o grupo e disse:",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s12b",
+  "text": "“Vocês não vieram sozinhos.”",
+  "rate": "+0%",
+  "pitch": "-6Hz",
+  "say": "Vocês... não vieram sozinhos."
+ },
+ {
+  "id": "s13",
+  "text": "A sombra que tinha atravessado com eles saiu do meio da neve e fugiu pela ponte.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s14",
+  "text": "Ela correu até uma árvore gigantesca, cujas raízes, nesta aventura, ligam todos os mundos.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s15",
+  "text": "E as raízes estavam escurecendo. Cada portal aberto era uma ferida na árvore.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s16",
+  "text": "Thor, Zeus, Xangô e Tupã lançaram quatro raios ao mesmo tempo contra a escuridão.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s17",
+  "text": "A sombra recuou... mas deixou para trás um segundo fragmento, com a mesma marca.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s18",
+  "text": "Quando os dois fragmentos se tocaram, eles formaram parte de um mapa.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s19",
+  "text": "E o mapa apontava para alguém que estava observando tudo desde o primeiro portal.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s20",
+  "text": "Cada mil curtidas revela mais um pedaço desse mapa.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s21",
+  "text": "Opção A: descer até as raízes da árvore e seguir a criatura.",
+  "rate": "+24%",
+  "pitch": "+3Hz",
+  "say": "Opção A! Descer até as raízes da árvore e seguir a criatura."
+ },
+ {
+  "id": "s22",
+  "text": "Opção B: levar os fragmentos até Anúbis, no Egito, e descobrir quem é o observador.",
+  "rate": "+24%",
+  "pitch": "+3Hz",
+  "say": "Opção B! Levar os fragmentos até Anúbis, no Egito, e descobrir quem é o observador."
+ },
+ {
+  "id": "s23a",
+  "text": "Comente A ou B.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s23b",
+  "text": "Mas cuidado...",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s23c",
+  "text": "o observador também está assistindo vocês.",
+  "rate": "+4%",
+  "pitch": "-4Hz"
+ }
+]

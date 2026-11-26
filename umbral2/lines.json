@@ -1,0 +1,231 @@
+[
+ {
+  "id": "l01",
+  "text": "Caio, sai daí!",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+60Hz",
+  "rate": "+4%",
+  "who": "fone"
+ },
+ {
+  "id": "l02",
+  "text": "Era a voz do irmão dele. Só que vinha de dentro de uma gravação.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l03",
+  "text": "Vocês votaram ABRE. E Caio abriu.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar",
+  "say": "Vocês votaram \"abre\". E Caio abriu."
+ },
+ {
+  "id": "l04",
+  "text": "Do outro lado, encontrou a cozinha de casa. O relógio estava parado às 3h17. Em cima da mesa, um celular tocava o mesmo áudio.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar",
+  "say": "Do outro lado, encontrou a cozinha de casa. O relógio estava parado às três e dezessete. Em cima da mesa, um celular tocava o mesmo áudio."
+ },
+ {
+  "id": "l05",
+  "text": "Caio, sai daí! Eu já tô na rua!",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+60Hz",
+  "rate": "+4%",
+  "who": "fone"
+ },
+ {
+  "id": "l06",
+  "text": "Caio deu play de novo.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l07",
+  "text": "Eu já tô na rua!",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+60Hz",
+  "rate": "+4%",
+  "who": "fone"
+ },
+ {
+  "id": "l08",
+  "text": "Ele tinha voltado pra casa pra buscar o irmão. A mensagem dizia que o irmão já tinha saído.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l09",
+  "text": "Caio?",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+60Hz",
+  "rate": "-6%",
+  "who": "irmao"
+ },
+ {
+  "id": "l10",
+  "text": "Dessa vez, a voz respondeu quando ele chamou de volta.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l11",
+  "text": "Caio correu até a janela. Viu o irmão do outro lado do vidro, com os olhos cheios d’água. Atrás dele, a mãe segurava uma camiseta de Caio junto ao peito.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l12",
+  "text": "Caio bateu no vidro. Nenhum dos dois olhou.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l13",
+  "text": "Então o irmão encostou a testa na janela e sussurrou:",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l14",
+  "text": "Dessa vez, me espera.",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+60Hz",
+  "rate": "-6%",
+  "who": "irmao"
+ },
+ {
+  "id": "l15",
+  "text": "Lia se aproximou devagar.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l16",
+  "text": "É essa a voz que me acorda. Só que, comigo, ela sempre fala outra coisa.",
+  "voice": "pt-BR-FranciscaNeural",
+  "pitch": "+55Hz",
+  "rate": "+2%",
+  "who": "lia"
+ },
+ {
+  "id": "l17",
+  "text": "O quê?",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+30Hz",
+  "rate": "-15%",
+  "who": "caio",
+  "say": "O quê... ?"
+ },
+ {
+  "id": "l18",
+  "text": "“Se encontrar meu irmão, diz que eu saí.”",
+  "voice": "pt-BR-FranciscaNeural",
+  "pitch": "+55Hz",
+  "rate": "+2%",
+  "who": "lia",
+  "say": "Se encontrar meu irmão, diz que eu saí."
+ },
+ {
+  "id": "l19",
+  "text": "Caio olhou pra ela.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l20",
+  "text": "Por que você nunca me contou?",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+30Hz",
+  "rate": "+4%",
+  "who": "caio"
+ },
+ {
+  "id": "l21",
+  "text": "Eu só descobri seu nome quando você perguntou o meu. Em todas as outras voltas, você passou correndo por mim.",
+  "voice": "pt-BR-FranciscaNeural",
+  "pitch": "+55Hz",
+  "rate": "+2%",
+  "who": "lia"
+ },
+ {
+  "id": "l22",
+  "text": "A janela se abriu sozinha. Do outro lado, o irmão de Caio estendeu a mão.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l23",
+  "text": "Caio ia pegar quando sentiu Lia soltar a dele.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l24",
+  "text": "Vai.",
+  "voice": "pt-BR-FranciscaNeural",
+  "pitch": "+55Hz",
+  "rate": "+2%",
+  "who": "lia"
+ },
+ {
+  "id": "l25",
+  "text": "Você vem comigo.",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+30Hz",
+  "rate": "+4%",
+  "who": "caio"
+ },
+ {
+  "id": "l26",
+  "text": "Lia tentou se aproximar. A cozinha desapareceu debaixo dos pés dela. Por um segundo, Caio viu a menina de volta no meio-fio, na mesma rua onde tinha acordado.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l27",
+  "text": "Então ouviu uma mulher gritar da neblina:",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l28",
+  "text": "Lia! Dessa vez, responde quando ouvir minha voz!",
+  "voice": "pt-BR-FranciscaNeural",
+  "pitch": "-4Hz",
+  "rate": "+0%",
+  "who": "maelia"
+ },
+ {
+  "id": "l29",
+  "text": "Caio… é a minha mãe.",
+  "voice": "pt-BR-FranciscaNeural",
+  "pitch": "+55Hz",
+  "rate": "+2%",
+  "who": "lia"
+ },
+ {
+  "id": "l30",
+  "text": "Caio espera pelo irmão ou vai com Lia atrás da mãe dela? Comenta IRMÃO ou LIA. O voto mais escolhido decide a parte 3.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar",
+  "say": "Caio espera pelo irmão ou vai com Lia atrás da mãe dela? Comenta \"irmão\" ou \"Lia\". O voto mais escolhido decide a parte três."
+ }
+]

@@ -1,0 +1,15 @@
+O Encontro dos Panteões — Episódio 03 — Histórias e Crenças
+
+Roteiro: do canal.
+Direção, animação 2D, efeitos, interface, trilha e mixagem: produzidos em código (canvas 2D).
+
+Arte dos personagens e cenários: gerada com a ferramenta de imagem do Codex CLI (image_gen) a partir dos prompts em tools/sheets.py.
+O episódio também reaproveita a arte dos Ep. 01 e 02 (~/panteoes/tools/sheets.py e ~/panteoes2/tools/sheets.py).
+Os desenhos são próprios; não são personagens de outra obra.
+Zeus, Thor, Heimdall e Anúbis (mitologias grega, nórdica e egípcia), Xangô, Ogum e Iansã (tradição iorubá) e Tupã, Jaci, Guaraci e Anhangá (inspirados em narrativas tupi-guarani) aparecem como interpretações artísticas de uma história de ficção.
+
+Voz: Microsoft Edge TTS, pt-BR-AntonioNeural.
+Fontes:
+- Anton (SIL Open Font License, fonts/OFL-anton.txt)
+- Fredoka (SIL Open Font License)
+Música: instrumentos amostrados (ver CREDITS_music.txt); efeitos sonoros sintetizados.

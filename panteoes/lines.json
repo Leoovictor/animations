@@ -1,0 +1,168 @@
+[
+ {
+  "id": "s01",
+  "text": "E se Zeus descobrisse que não era o único senhor dos trovões?",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s02",
+  "text": "Tudo começou quando um estranho portal apareceu no Monte Olimpo.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s03",
+  "text": "Convencido de que nada poderia ameaçá-lo, Zeus decidiu atravessar.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s04",
+  "text": "Mas, do outro lado, encontrou um mundo completamente diferente.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s05",
+  "text": "Antes que pudesse entender onde estava, um trovão fez a terra estremecer.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s06",
+  "text": "Era Xangô, Orixá associado à justiça, aos raios e aos trovões.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s07a",
+  "text": "Zeus olhou para ele e perguntou:",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s07b",
+  "text": "“Desde quando existe outro senhor dos trovões?”",
+  "rate": "+4%",
+  "pitch": "+8Hz",
+  "say": "Desde quando existe outro senhor dos trovões?!"
+ },
+ {
+  "id": "s08a",
+  "text": "Xangô respondeu:",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s08b",
+  "text": "“O céu não pertence a um único povo.”",
+  "rate": "-8%",
+  "pitch": "-6Hz",
+  "say": "O céu... não pertence a um único povo."
+ },
+ {
+  "id": "s09",
+  "text": "Zeus lançou um raio para demonstrar seu poder. Xangô respondeu com outro.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s10",
+  "text": "Mas a colisão provocou algo que nenhum dos dois esperava.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s11",
+  "text": "Ogum foi o primeiro a perceber que os dois mundos estavam em perigo.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s12a",
+  "text": "Então, uma tempestade ainda maior tomou conta do lugar.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s12b",
+  "text": "Iansã havia chegado.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s13",
+  "text": "Pela primeira vez, Zeus percebeu que não conhecia todas as forças daquele mundo.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s14",
+  "text": "Foi quando uma criatura desconhecida começou a atravessar a rachadura.",
+  "rate": "+2%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s15",
+  "text": "Antes que começassem uma batalha, Oxalá surgiu e revelou uma verdade.",
+  "rate": "+0%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s16a",
+  "text": "O portal não surgiu por acaso.",
+  "rate": "+0%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s16b",
+  "text": "Alguém queria colocar os dois panteões uns contra os outros.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s17",
+  "text": "E agora, o destino desses dois mundos depende da decisão de vocês.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s18",
+  "text": "No próximo episódio, cada mil curtidas desbloqueia uma pista sobre quem abriu o portal.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s19",
+  "text": "Opção A: Zeus e Xangô deixam suas diferenças de lado e investigam juntos a origem do portal.",
+  "rate": "+9%",
+  "pitch": "+3Hz",
+  "say": "Opção A! Zeus e Xangô deixam suas diferenças de lado e investigam juntos a origem do portal."
+ },
+ {
+  "id": "s20",
+  "text": "Opção B: Ogum e Iansã atravessam o portal para descobrir o que está tentando entrar.",
+  "rate": "+9%",
+  "pitch": "+3Hz",
+  "say": "Opção B! Ogum e Iansã atravessam o portal para descobrir o que está tentando entrar."
+ },
+ {
+  "id": "s21a",
+  "text": "Comente A ou B. O caminho mais votado será o próximo episódio.",
+  "rate": "+9%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s21b",
+  "text": "Mas escolham rápido...",
+  "rate": "+0%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s21c",
+  "text": "porque aquilo já começou a atravessar.",
+  "rate": "-4%",
+  "pitch": "-4Hz"
+ }
+]

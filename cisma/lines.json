@@ -1,0 +1,101 @@
+[
+ {
+  "id": "l01",
+  "text": "Em 1054, a Igreja se partiu ao meio. E uma das brigas era por causa de uma única palavra.",
+  "rate": "+6%",
+  "say": "Em mil e cinquenta e quatro, a Igreja se partiu ao meio. E uma das brigas era por causa de uma única palavra."
+ },
+ {
+  "id": "l02",
+  "text": "E o mais estranho: a excomunhão foi entregue em nome de um papa… que já tinha morrido.",
+  "rate": "+6%",
+  "say": "E o mais estranho: a excomunhão foi entregue em nome de um papa... que já tinha morrido."
+ },
+ {
+  "id": "l03",
+  "text": "Fica comigo, porque o final dessa história só chegou novecentos anos depois.",
+  "rate": "+6%"
+ },
+ {
+  "id": "l04",
+  "text": "Durante séculos, os cristãos dividiam o mesmo mapa: no Ocidente, a Igreja de Roma, que falava latim. No Oriente, Constantinopla, que falava grego.",
+  "rate": "+6%"
+ },
+ {
+  "id": "l05",
+  "text": "E os dois lados foram se afastando: na língua, nos costumes e na política.",
+  "rate": "+6%"
+ },
+ {
+  "id": "l06",
+  "text": "Primeira briga: quem manda? Roma dizia que o papa tinha autoridade sobre toda a Igreja. Constantinopla via o papa como o primeiro entre iguais.",
+  "rate": "+6%"
+ },
+ {
+  "id": "l07",
+  "text": "Segunda briga: a tal palavra. No Ocidente, o Credo passou a dizer que o Espírito Santo procede do Pai… e do Filho. Em latim: Filioque.",
+  "rate": "+6%",
+  "say": "Segunda briga: a tal palavra. No Ocidente, o Credo passou a dizer que o Espírito Santo procede do Pai... e do Filho. Em latim: Filiôque."
+ },
+ {
+  "id": "l08",
+  "text": "No Oriente, isso foi visto como mexer num texto aprovado em concílio.",
+  "rate": "+6%"
+ },
+ {
+  "id": "l09",
+  "text": "Terceira briga: até o pão da missa. Roma usava pão sem fermento. Constantinopla, pão com fermento.",
+  "rate": "+6%"
+ },
+ {
+  "id": "l10",
+  "text": "Em 1054, os enviados de Roma colocaram uma bula de excomunhão no altar da Hagia Sophia.",
+  "rate": "+6%",
+  "say": "Em mil e cinquenta e quatro, os enviados de Roma colocaram uma bula de excomunhão no altar da Ága Sofía."
+ },
+ {
+  "id": "l11",
+  "text": "E o patriarca de Constantinopla respondeu excomungando os enviados.",
+  "rate": "+6%"
+ },
+ {
+  "id": "l12",
+  "text": "Só que o papa Leão IX, que tinha mandado a missão, já tinha morrido três meses antes.",
+  "rate": "+6%",
+  "say": "Só que o papa Leão nono, que tinha mandado a missão, já tinha morrido três meses antes."
+ },
+ {
+  "id": "l13",
+  "text": "Por isso, muitos historiadores dizem que a separação não aconteceu num dia só: foi um afastamento lento.",
+  "rate": "+6%"
+ },
+ {
+  "id": "l14",
+  "text": "O golpe mais duro veio em 1204: cruzados saquearam Constantinopla, uma cidade cristã.",
+  "rate": "+6%",
+  "say": "O golpe mais duro veio em mil duzentos e quatro: cruzados saquearam Constantinopla, uma cidade cristã."
+ },
+ {
+  "id": "l15",
+  "text": "Depois disso, a ferida ficou muito mais difícil de fechar.",
+  "rate": "+6%"
+ },
+ {
+  "id": "l16",
+  "text": "E o final? Em 1965, o papa Paulo VI e o patriarca Atenágoras retiraram as excomunhões de 1054.",
+  "rate": "+6%",
+  "say": "E o final? Em mil novecentos e sessenta e cinco, o papa Paulo sexto e o patriarca Atenágoras retiraram as excomunhões de mil e cinquenta e quatro."
+ },
+ {
+  "id": "l17",
+  "text": "Mas a separação continua: hoje existem católicos e ortodoxos, com muita fé em comum… e diferenças que nasceram lá atrás.",
+  "rate": "+6%",
+  "say": "Mas a separação continua: hoje existem católicos e ortodoxos, com muita fé em comum... e diferenças que nasceram lá atrás."
+ },
+ {
+  "id": "l18",
+  "text": "Você sabia que eles já foram uma Igreja só? Porque tudo começou em…",
+  "rate": "+6%",
+  "say": "Você sabia que eles já foram uma Igreja só? Porque tudo começou em..."
+ }
+]

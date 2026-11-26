@@ -1,0 +1,162 @@
+[
+ {
+  "id": "s01",
+  "text": "Zeus atravessou o portal... e descobriu que existia outro senhor dos trovões. Desta vez, no Brasil!",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s02",
+  "text": "Depois de descobrirem que alguém estava conectando seus mundos, os quatro decidiram atravessar o portal.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s03",
+  "text": "Mas alguma coisa deu errado. O portal mudou de direção e os lançou em uma floresta desconhecida.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s04",
+  "text": "Árvores gigantescas, rios intermináveis e uma floresta que parecia observar cada movimento.",
+  "rate": "+18%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s05",
+  "text": "Ogum percebeu primeiro. Havia alguma coisa seguindo o grupo.",
+  "rate": "+16%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s06",
+  "text": "Era Anhangá, uma misteriosa entidade que, naquela história, protegia os animais da floresta.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s07",
+  "text": "Zeus, impaciente, lançou um raio para iluminar o caminho. Mas seu raio simplesmente desapareceu.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s08",
+  "text": "Então, um trovão tão poderoso fez toda a floresta estremecer.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s09",
+  "text": "Era Tupã. E ele não parecia nada surpreso com a chegada dos visitantes.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s10a",
+  "text": "Zeus olhou para Xangô e disse:",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s10b",
+  "text": "“Primeiro você... agora mais um?”",
+  "rate": "+16%",
+  "pitch": "+8Hz",
+  "say": "Primeiro você... agora mais um?!"
+ },
+ {
+  "id": "s11a",
+  "text": "Tupã respondeu:",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s11b",
+  "text": "“Vocês não chegaram aqui por acidente. A floresta sentiu a ruptura dos mundos.”",
+  "rate": "+4%",
+  "pitch": "-6Hz",
+  "say": "Vocês não chegaram aqui por acidente. A floresta sentiu a ruptura dos mundos."
+ },
+ {
+  "id": "s12",
+  "text": "Naquele instante, o dia se transformou em noite. E uma figura surgiu sob a luz da Lua.",
+  "rate": "+18%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s13",
+  "text": "Jaci mostrou que dezenas de portais estavam sendo abertos em diferentes partes do universo.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s14",
+  "text": "Mas Guaraci revelou algo ainda pior. Uma força desconhecida estava apagando a luz de cada mundo.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s15",
+  "text": "E foi naquele momento que eles ouviram o mesmo rugido do portal anterior.",
+  "rate": "+16%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s16",
+  "text": "Sem hesitar, Zeus, Xangô e Tupã ergueram suas forças contra a escuridão.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s17",
+  "text": "Quando a escuridão recuou, Anhangá retornou carregando um estranho fragmento.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s18",
+  "text": "Tupã tocou o fragmento. Imediatamente, dois novos portais se abriram.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s19",
+  "text": "Agora vocês precisam decidir para onde essa aliança vai. Cada mil curtidas desbloqueia uma pista sobre a criatura.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s20",
+  "text": "Opção A: atravessar o portal congelado e descobrir o que Thor sabe sobre a ameaça.",
+  "rate": "+24%",
+  "pitch": "+3Hz",
+  "say": "Opção A! Atravessar o portal congelado e descobrir o que Thor sabe sobre a ameaça."
+ },
+ {
+  "id": "s21",
+  "text": "Opção B: seguir para o Egito e descobrir por que Anúbis já conhece o símbolo.",
+  "rate": "+24%",
+  "pitch": "+3Hz",
+  "say": "Opção B! Seguir para o Egito e descobrir por que Anúbis já conhece o símbolo."
+ },
+ {
+  "id": "s22a",
+  "text": "Comente A ou B.",
+  "rate": "+24%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s22b",
+  "text": "Mas tem um problema...",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "s22c",
+  "text": "alguma coisa atravessou junto com eles.",
+  "rate": "+4%",
+  "pitch": "-4Hz"
+ }
+]

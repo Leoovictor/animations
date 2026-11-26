@@ -1,0 +1,227 @@
+[
+ {
+  "id": "l01",
+  "text": "Mãe, abre! Sou eu!",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+30Hz",
+  "rate": "+4%",
+  "who": "porta"
+ },
+ {
+  "id": "l02",
+  "text": "Caio congelou. Aquela era a voz dele.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l03",
+  "text": "Caio tinha acabado de acordar descalço numa rua coberta de neblina. Só havia uma casa com luz acesa. A dele.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l04",
+  "text": "Quando ouviu a própria voz lá dentro, deu dois passos pra trás e saiu correndo.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l05",
+  "text": "Virou a esquina. Correu até perder o fôlego.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l06",
+  "text": "E chegou na mesma porta.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l07",
+  "text": "Mãe, abre! Sou eu!",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+30Hz",
+  "rate": "+4%",
+  "who": "porta"
+ },
+ {
+  "id": "l08",
+  "text": "Na segunda volta, Caio riscou a parede com uma pedra. Na terceira, passou pelo mesmo risco.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l09",
+  "text": "Foi aí que reparou numa menina sentada no meio-fio.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l10",
+  "text": "Quanto tempo faz que eu tô aqui?",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+30Hz",
+  "rate": "+4%",
+  "who": "caio"
+ },
+ {
+  "id": "l11",
+  "text": "Pra você? Uns minutos. Eu já te vi passar sete vezes.",
+  "voice": "pt-BR-FranciscaNeural",
+  "pitch": "+55Hz",
+  "rate": "+2%",
+  "who": "lia"
+ },
+ {
+  "id": "l12",
+  "text": "Caio olhou pra parede. Por baixo do risco que acabara de fazer, havia outros seis.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar",
+  "say": "Caio olhou pra parede. Por baixo do risco que tinha acabado de fazer, havia outros seis."
+ },
+ {
+  "id": "l13",
+  "text": "Que lugar é esse?",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+30Hz",
+  "rate": "+4%",
+  "who": "caio"
+ },
+ {
+  "id": "l14",
+  "text": "Chamam de Umbral. Eu também acordo sempre na mesma rua.",
+  "voice": "pt-BR-FranciscaNeural",
+  "pitch": "+55Hz",
+  "rate": "+2%",
+  "who": "lia"
+ },
+ {
+  "id": "l15",
+  "text": "A voz atrás da porta chamou de novo. Só que, dessa vez, Caio ficou até ouvir o resto.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l16",
+  "text": "Mãe, abre! Sou eu! Eu voltei pra buscar meu irmão!",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+30Hz",
+  "rate": "+4%",
+  "who": "porta"
+ },
+ {
+  "id": "l17",
+  "text": "Ele lembrou do incêndio. Lembrou de voltar correndo pra casa.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l18",
+  "text": "E lembrou da mão do irmão escapando da sua.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l19",
+  "text": "Com a mão na maçaneta, Caio viu a menina se levantar.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l20",
+  "text": "Se você conseguir sair… pode perguntar se alguém tá procurando por mim?",
+  "voice": "pt-BR-FranciscaNeural",
+  "pitch": "+55Hz",
+  "rate": "+2%",
+  "who": "lia"
+ },
+ {
+  "id": "l21",
+  "text": "Caio soltou a maçaneta.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l22",
+  "text": "Qual é o seu nome?",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+30Hz",
+  "rate": "+4%",
+  "who": "caio"
+ },
+ {
+  "id": "l23",
+  "text": "Lia.",
+  "voice": "pt-BR-FranciscaNeural",
+  "pitch": "+55Hz",
+  "rate": "+2%",
+  "who": "lia",
+  "say": "Lia."
+ },
+ {
+  "id": "l24",
+  "text": "Ele estendeu a mão. Quando Lia se levantou, a luz da casa apagou. Pela primeira vez, a neblina baixou o suficiente pra mostrar o fim da rua.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l25",
+  "text": "Havia outra porta lá.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l26",
+  "text": "Antes que os dois chegassem perto, alguém bateu do outro lado.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l27",
+  "text": "Caio? Sou eu. Seu irmão. Dessa vez, me espera.",
+  "voice": "pt-BR-ThalitaMultilingualNeural",
+  "pitch": "+60Hz",
+  "rate": "-6%",
+  "who": "irmao"
+ },
+ {
+  "id": "l28",
+  "text": "Lia apertou a mão dele.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar"
+ },
+ {
+  "id": "l29",
+  "text": "Caio… essa é a voz que me chama toda vez que eu acordo aqui.",
+  "voice": "pt-BR-FranciscaNeural",
+  "pitch": "+55Hz",
+  "rate": "+2%",
+  "who": "lia"
+ },
+ {
+  "id": "l30",
+  "text": "Você abriria a porta? Comenta ABRE ou ESPERA e me conta quem você acha que tá do outro lado. O voto mais escolhido decide o que Caio faz na parte 2.",
+  "voice": "pt-BR-AntonioNeural",
+  "rate": "+4%",
+  "who": "nar",
+  "say": "Você abriria a porta? Comenta \"abre\" ou \"espera\" e me conta quem você acha que tá do outro lado. O voto mais escolhido decide o que Caio faz na parte dois."
+ }
+]

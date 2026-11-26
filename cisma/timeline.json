@@ -1,0 +1,1943 @@
+{
+ "B": 0.6,
+ "dur": 131.942,
+ "scenes": {
+  "hook": {
+   "t0": 0.0,
+   "t1": 18.0,
+   "beat0": 0
+  },
+  "mapa": {
+   "t0": 18.0,
+   "t1": 34.2,
+   "beat0": 30
+  },
+  "quem": {
+   "t0": 34.2,
+   "t1": 45.6,
+   "beat0": 57
+  },
+  "filioque": {
+   "t0": 45.6,
+   "t1": 61.2,
+   "beat0": 76
+  },
+  "pao": {
+   "t0": 61.2,
+   "t1": 70.2,
+   "beat0": 102
+  },
+  "bula": {
+   "t0": 70.2,
+   "t1": 81.6,
+   "beat0": 117
+  },
+  "morto": {
+   "t0": 81.6,
+   "t1": 88.8,
+   "beat0": 136
+  },
+  "lento": {
+   "t0": 88.8,
+   "t1": 96.0,
+   "beat0": 148
+  },
+  "s1204": {
+   "t0": 96.0,
+   "t1": 108.0,
+   "beat0": 160
+  },
+  "s1965": {
+   "t0": 108.0,
+   "t1": 117.6,
+   "beat0": 180
+  },
+  "hoje": {
+   "t0": 117.6,
+   "t1": 126.6,
+   "beat0": 196
+  },
+  "ret": {
+   "t0": 126.6,
+   "t1": 131.942,
+   "beat0": 211
+  }
+ },
+ "lines": {
+  "l01": {
+   "t0": 0.45,
+   "t1": 6.976,
+   "text": "Em 1054, a Igreja se partiu ao meio. E uma das brigas era por causa de uma única palavra."
+  },
+  "l02": {
+   "t0": 7.476,
+   "t1": 12.035,
+   "text": "E o mais estranho: a excomunhão foi entregue em nome de um papa… que já tinha morrido."
+  },
+  "l03": {
+   "t0": 12.485,
+   "t1": 16.708,
+   "text": "Fica comigo, porque o final dessa história só chegou novecentos anos depois."
+  },
+  "l04": {
+   "t0": 18.4,
+   "t1": 28.305,
+   "text": "Durante séculos, os cristãos dividiam o mesmo mapa: no Ocidente, a Igreja de Roma, que falava latim. No Oriente, Constantinopla, que falava grego."
+  },
+  "l05": {
+   "t0": 28.755,
+   "t1": 33.076,
+   "text": "E os dois lados foram se afastando: na língua, nos costumes e na política."
+  },
+  "l06": {
+   "t0": 34.55,
+   "t1": 43.933,
+   "text": "Primeira briga: quem manda? Roma dizia que o papa tinha autoridade sobre toda a Igreja. Constantinopla via o papa como o primeiro entre iguais."
+  },
+  "l07": {
+   "t0": 45.95,
+   "t1": 55.972,
+   "text": "Segunda briga: a tal palavra. No Ocidente, o Credo passou a dizer que o Espírito Santo procede do Pai… e do Filho. Em latim: Filioque."
+  },
+  "l08": {
+   "t0": 56.422,
+   "t1": 60.27,
+   "text": "No Oriente, isso foi visto como mexer num texto aprovado em concílio."
+  },
+  "l09": {
+   "t0": 61.55,
+   "t1": 68.99,
+   "text": "Terceira briga: até o pão da missa. Roma usava pão sem fermento. Constantinopla, pão com fermento."
+  },
+  "l10": {
+   "t0": 70.6,
+   "t1": 76.192,
+   "text": "Em 1054, os enviados de Roma colocaram uma bula de excomunhão no altar da Hagia Sophia."
+  },
+  "l11": {
+   "t0": 76.592,
+   "t1": 80.215,
+   "text": "E o patriarca de Constantinopla respondeu excomungando os enviados."
+  },
+  "l12": {
+   "t0": 81.9,
+   "t1": 87.025,
+   "text": "Só que o papa Leão IX, que tinha mandado a missão, já tinha morrido três meses antes."
+  },
+  "l13": {
+   "t0": 89.2,
+   "t1": 94.977,
+   "text": "Por isso, muitos historiadores dizem que a separação não aconteceu num dia só: foi um afastamento lento."
+  },
+  "l14": {
+   "t0": 96.5,
+   "t1": 102.622,
+   "text": "O golpe mais duro veio em 1204: cruzados saquearam Constantinopla, uma cidade cristã."
+  },
+  "l15": {
+   "t0": 103.072,
+   "t1": 106.486,
+   "text": "Depois disso, a ferida ficou muito mais difícil de fechar."
+  },
+  "l16": {
+   "t0": 108.5,
+   "t1": 116.606,
+   "text": "E o final? Em 1965, o papa Paulo VI e o patriarca Atenágoras retiraram as excomunhões de 1054."
+  },
+  "l17": {
+   "t0": 118.0,
+   "t1": 125.495,
+   "text": "Mas a separação continua: hoje existem católicos e ortodoxos, com muita fé em comum… e diferenças que nasceram lá atrás."
+  },
+  "l18": {
+   "t0": 127.0,
+   "t1": 131.592,
+   "text": "Você sabia que eles já foram uma Igreja só? Porque tudo começou em…"
+  }
+ },
+ "words": {
+  "l01": [
+   [
+    "Em",
+    0.45,
+    0.63
+   ],
+   [
+    "1054,",
+    0.63,
+    1.47
+   ],
+   [
+    "a",
+    1.97,
+    2.09
+   ],
+   [
+    "Igreja",
+    2.09,
+    2.43
+   ],
+   [
+    "se",
+    2.43,
+    2.65
+   ],
+   [
+    "partiu",
+    2.65,
+    2.95
+   ],
+   [
+    "ao",
+    2.95,
+    3.11
+   ],
+   [
+    "meio.",
+    3.11,
+    3.29
+   ],
+   [
+    "E",
+    4.17,
+    4.37
+   ],
+   [
+    "uma",
+    4.37,
+    4.51
+   ],
+   [
+    "das",
+    4.51,
+    4.75
+   ],
+   [
+    "brigas",
+    4.75,
+    5.13
+   ],
+   [
+    "era",
+    5.13,
+    5.27
+   ],
+   [
+    "por",
+    5.27,
+    5.55
+   ],
+   [
+    "causa",
+    5.55,
+    5.79
+   ],
+   [
+    "de",
+    5.79,
+    5.99
+   ],
+   [
+    "uma",
+    5.99,
+    6.13
+   ],
+   [
+    "única",
+    6.13,
+    6.45
+   ],
+   [
+    "palavra.",
+    6.45,
+    6.89
+   ]
+  ],
+  "l02": [
+   [
+    "E",
+    7.476,
+    7.656
+   ],
+   [
+    "o",
+    7.656,
+    7.756
+   ],
+   [
+    "mais",
+    7.756,
+    8.036
+   ],
+   [
+    "estranho:",
+    8.036,
+    8.556
+   ],
+   [
+    "a",
+    8.696,
+    8.816
+   ],
+   [
+    "excomunhão",
+    9.106,
+    9.256
+   ],
+   [
+    "foi",
+    9.396,
+    9.576
+   ],
+   [
+    "entregue",
+    9.576,
+    9.956
+   ],
+   [
+    "em",
+    9.956,
+    9.976
+   ],
+   [
+    "nome",
+    9.976,
+    10.216
+   ],
+   [
+    "de",
+    10.216,
+    10.356
+   ],
+   [
+    "um",
+    10.356,
+    10.536
+   ],
+   [
+    "papa…",
+    10.536,
+    10.736
+   ],
+   [
+    "que",
+    11.016,
+    11.116
+   ],
+   [
+    "já",
+    11.116,
+    11.376
+   ],
+   [
+    "tinha",
+    11.376,
+    11.556
+   ],
+   [
+    "morrido.",
+    11.556,
+    11.996
+   ]
+  ],
+  "l03": [
+   [
+    "Fica",
+    12.485,
+    12.805
+   ],
+   [
+    "comigo,",
+    12.805,
+    13.165
+   ],
+   [
+    "porque",
+    13.545,
+    13.745
+   ],
+   [
+    "o",
+    13.745,
+    13.945
+   ],
+   [
+    "final",
+    13.945,
+    14.145
+   ],
+   [
+    "dessa",
+    14.145,
+    14.385
+   ],
+   [
+    "história",
+    14.385,
+    14.725
+   ],
+   [
+    "só",
+    14.725,
+    14.965
+   ],
+   [
+    "chegou",
+    14.965,
+    15.185
+   ],
+   [
+    "novecentos",
+    15.445,
+    15.595
+   ],
+   [
+    "anos",
+    15.705,
+    16.145
+   ],
+   [
+    "depois.",
+    16.145,
+    16.565
+   ]
+  ],
+  "l04": [
+   [
+    "Durante",
+    18.4,
+    18.92
+   ],
+   [
+    "séculos,",
+    18.92,
+    19.38
+   ],
+   [
+    "os",
+    19.64,
+    19.76
+   ],
+   [
+    "cristãos",
+    19.76,
+    20.1
+   ],
+   [
+    "dividiam",
+    20.1,
+    20.54
+   ],
+   [
+    "o",
+    20.54,
+    20.66
+   ],
+   [
+    "mesmo",
+    20.66,
+    20.9
+   ],
+   [
+    "mapa:",
+    20.9,
+    21.18
+   ],
+   [
+    "no",
+    21.54,
+    21.68
+   ],
+   [
+    "Ocidente,",
+    21.68,
+    22.16
+   ],
+   [
+    "a",
+    22.46,
+    22.6
+   ],
+   [
+    "Igreja",
+    22.6,
+    22.9
+   ],
+   [
+    "de",
+    22.9,
+    23.1
+   ],
+   [
+    "Roma,",
+    23.1,
+    23.32
+   ],
+   [
+    "que",
+    23.62,
+    23.8
+   ],
+   [
+    "falava",
+    23.8,
+    24.14
+   ],
+   [
+    "latim.",
+    24.14,
+    24.7
+   ],
+   [
+    "No",
+    25.32,
+    25.54
+   ],
+   [
+    "Oriente,",
+    25.54,
+    26.04
+   ],
+   [
+    "Constantinopla,",
+    26.4,
+    27.18
+   ],
+   [
+    "que",
+    27.4,
+    27.62
+   ],
+   [
+    "falava",
+    27.62,
+    27.92
+   ],
+   [
+    "grego.",
+    27.92,
+    28.34
+   ]
+  ],
+  "l05": [
+   [
+    "E",
+    28.755,
+    28.915
+   ],
+   [
+    "os",
+    28.915,
+    29.095
+   ],
+   [
+    "dois",
+    29.095,
+    29.375
+   ],
+   [
+    "lados",
+    29.375,
+    29.695
+   ],
+   [
+    "foram",
+    29.695,
+    29.915
+   ],
+   [
+    "se",
+    29.915,
+    30.095
+   ],
+   [
+    "afastando:",
+    30.095,
+    30.695
+   ],
+   [
+    "na",
+    30.955,
+    31.015
+   ],
+   [
+    "língua,",
+    31.015,
+    31.475
+   ],
+   [
+    "nos",
+    31.695,
+    31.835
+   ],
+   [
+    "costumes",
+    31.835,
+    32.295
+   ],
+   [
+    "e",
+    32.295,
+    32.455
+   ],
+   [
+    "na",
+    32.455,
+    32.575
+   ],
+   [
+    "política.",
+    32.575,
+    32.955
+   ]
+  ],
+  "l06": [
+   [
+    "Primeira",
+    34.55,
+    35.03
+   ],
+   [
+    "briga:",
+    35.03,
+    35.39
+   ],
+   [
+    "quem",
+    35.69,
+    35.81
+   ],
+   [
+    "manda?",
+    35.99,
+    36.53
+   ],
+   [
+    "Roma",
+    37.17,
+    37.37
+   ],
+   [
+    "dizia",
+    37.37,
+    37.79
+   ],
+   [
+    "que",
+    37.79,
+    37.91
+   ],
+   [
+    "o",
+    37.91,
+    38.07
+   ],
+   [
+    "papa",
+    38.07,
+    38.25
+   ],
+   [
+    "tinha",
+    38.25,
+    38.47
+   ],
+   [
+    "autoridade",
+    38.47,
+    39.11
+   ],
+   [
+    "sobre",
+    39.11,
+    39.43
+   ],
+   [
+    "toda",
+    39.43,
+    39.71
+   ],
+   [
+    "a",
+    39.71,
+    39.85
+   ],
+   [
+    "Igreja.",
+    39.85,
+    40.55
+   ],
+   [
+    "Constantinopla",
+    41.39,
+    41.95
+   ],
+   [
+    "via",
+    41.95,
+    42.11
+   ],
+   [
+    "o",
+    42.11,
+    42.33
+   ],
+   [
+    "papa",
+    42.33,
+    42.53
+   ],
+   [
+    "como",
+    42.53,
+    42.81
+   ],
+   [
+    "o",
+    42.81,
+    42.91
+   ],
+   [
+    "primeiro",
+    42.91,
+    43.15
+   ],
+   [
+    "entre",
+    43.15,
+    43.45
+   ],
+   [
+    "iguais.",
+    43.45,
+    43.77
+   ]
+  ],
+  "l07": [
+   [
+    "Segunda",
+    45.97,
+    46.53
+   ],
+   [
+    "briga:",
+    46.53,
+    46.91
+   ],
+   [
+    "a",
+    47.19,
+    47.31
+   ],
+   [
+    "tal",
+    47.31,
+    47.47
+   ],
+   [
+    "palavra.",
+    47.47,
+    47.89
+   ],
+   [
+    "No",
+    48.83,
+    48.93
+   ],
+   [
+    "Ocidente,",
+    48.93,
+    49.51
+   ],
+   [
+    "o",
+    49.83,
+    49.99
+   ],
+   [
+    "Credo",
+    49.99,
+    50.29
+   ],
+   [
+    "passou",
+    50.29,
+    50.53
+   ],
+   [
+    "a",
+    50.53,
+    50.75
+   ],
+   [
+    "dizer",
+    50.75,
+    50.95
+   ],
+   [
+    "que",
+    50.95,
+    51.11
+   ],
+   [
+    "o",
+    51.11,
+    51.27
+   ],
+   [
+    "Espírito",
+    51.27,
+    51.61
+   ],
+   [
+    "Santo",
+    51.61,
+    51.91
+   ],
+   [
+    "procede",
+    51.91,
+    52.41
+   ],
+   [
+    "do",
+    52.41,
+    52.57
+   ],
+   [
+    "Pai…",
+    52.57,
+    52.79
+   ],
+   [
+    "e",
+    52.79,
+    53.19
+   ],
+   [
+    "do",
+    53.19,
+    53.45
+   ],
+   [
+    "Filho.",
+    53.45,
+    53.67
+   ],
+   [
+    "Em",
+    54.49,
+    54.67
+   ],
+   [
+    "latim:",
+    54.67,
+    55.21
+   ],
+   [
+    "Filioque.",
+    55.47,
+    55.93
+   ]
+  ],
+  "l08": [
+   [
+    "No",
+    56.422,
+    56.662
+   ],
+   [
+    "Oriente,",
+    56.662,
+    57.162
+   ],
+   [
+    "isso",
+    57.422,
+    57.542
+   ],
+   [
+    "foi",
+    57.542,
+    57.722
+   ],
+   [
+    "visto",
+    57.722,
+    58.022
+   ],
+   [
+    "como",
+    58.022,
+    58.262
+   ],
+   [
+    "mexer",
+    58.262,
+    58.662
+   ],
+   [
+    "num",
+    58.662,
+    58.802
+   ],
+   [
+    "texto",
+    58.802,
+    59.142
+   ],
+   [
+    "aprovado",
+    59.142,
+    59.602
+   ],
+   [
+    "em",
+    59.602,
+    59.782
+   ],
+   [
+    "concílio.",
+    59.782,
+    60.202
+   ]
+  ],
+  "l09": [
+   [
+    "Terceira",
+    61.55,
+    62.11
+   ],
+   [
+    "briga:",
+    62.11,
+    62.47
+   ],
+   [
+    "até",
+    62.75,
+    62.87
+   ],
+   [
+    "o",
+    62.87,
+    63.05
+   ],
+   [
+    "pão",
+    63.05,
+    63.17
+   ],
+   [
+    "da",
+    63.17,
+    63.35
+   ],
+   [
+    "missa.",
+    63.35,
+    64.33
+   ],
+   [
+    "Roma",
+    64.65,
+    64.73
+   ],
+   [
+    "usava",
+    64.73,
+    65.17
+   ],
+   [
+    "pão",
+    65.17,
+    65.41
+   ],
+   [
+    "sem",
+    65.41,
+    65.63
+   ],
+   [
+    "fermento.",
+    65.63,
+    66.67
+   ],
+   [
+    "Constantinopla,",
+    67.39,
+    67.95
+   ],
+   [
+    "pão",
+    68.17,
+    68.33
+   ],
+   [
+    "com",
+    68.33,
+    68.53
+   ],
+   [
+    "fermento.",
+    68.53,
+    69.09
+   ]
+  ],
+  "l10": [
+   [
+    "Em",
+    70.6,
+    70.8
+   ],
+   [
+    "1054,",
+    70.8,
+    71.66
+   ],
+   [
+    "os",
+    72.2,
+    72.36
+   ],
+   [
+    "enviados",
+    72.36,
+    72.84
+   ],
+   [
+    "de",
+    72.84,
+    73.02
+   ],
+   [
+    "Roma",
+    73.02,
+    73.22
+   ],
+   [
+    "colocaram",
+    73.22,
+    73.7
+   ],
+   [
+    "uma",
+    73.7,
+    74.0
+   ],
+   [
+    "bula",
+    74.0,
+    74.22
+   ],
+   [
+    "de",
+    74.22,
+    74.42
+   ],
+   [
+    "excomunhão",
+    74.66,
+    74.81
+   ],
+   [
+    "no",
+    74.9,
+    75.02
+   ],
+   [
+    "altar",
+    75.02,
+    75.28
+   ],
+   [
+    "da",
+    75.28,
+    75.48
+   ],
+   [
+    "Hagia",
+    75.356,
+    75.678
+   ],
+   [
+    "Sophia.",
+    75.742,
+    76.192
+   ]
+  ],
+  "l11": [
+   [
+    "E",
+    76.592,
+    76.752
+   ],
+   [
+    "o",
+    76.752,
+    76.912
+   ],
+   [
+    "patriarca",
+    76.912,
+    77.392
+   ],
+   [
+    "de",
+    77.392,
+    77.712
+   ],
+   [
+    "Constantinopla",
+    77.712,
+    78.432
+   ],
+   [
+    "respondeu",
+    78.432,
+    78.812
+   ],
+   [
+    "excomungando",
+    79.132,
+    79.282
+   ],
+   [
+    "os",
+    79.452,
+    79.632
+   ],
+   [
+    "enviados.",
+    79.632,
+    80.112
+   ]
+  ],
+  "l12": [
+   [
+    "Só",
+    81.9,
+    82.22
+   ],
+   [
+    "que",
+    82.22,
+    82.38
+   ],
+   [
+    "o",
+    82.38,
+    82.5
+   ],
+   [
+    "papa",
+    82.5,
+    82.68
+   ],
+   [
+    "Leão",
+    82.68,
+    83.04
+   ],
+   [
+    "IX,",
+    83.32,
+    83.47
+   ],
+   [
+    "que",
+    83.6,
+    83.72
+   ],
+   [
+    "tinha",
+    83.72,
+    83.9
+   ],
+   [
+    "mandado",
+    83.9,
+    84.26
+   ],
+   [
+    "a",
+    84.26,
+    84.38
+   ],
+   [
+    "missão,",
+    84.38,
+    84.84
+   ],
+   [
+    "já",
+    85.12,
+    85.26
+   ],
+   [
+    "tinha",
+    85.26,
+    85.42
+   ],
+   [
+    "morrido",
+    85.42,
+    85.84
+   ],
+   [
+    "três",
+    85.84,
+    86.14
+   ],
+   [
+    "meses",
+    86.14,
+    86.48
+   ],
+   [
+    "antes.",
+    86.48,
+    86.9
+   ]
+  ],
+  "l13": [
+   [
+    "Por",
+    89.2,
+    89.44
+   ],
+   [
+    "isso,",
+    89.44,
+    89.76
+   ],
+   [
+    "muitos",
+    90.22,
+    90.36
+   ],
+   [
+    "historiadores",
+    90.36,
+    91.0
+   ],
+   [
+    "dizem",
+    91.0,
+    91.32
+   ],
+   [
+    "que",
+    91.32,
+    91.46
+   ],
+   [
+    "a",
+    91.46,
+    91.6
+   ],
+   [
+    "separação",
+    91.6,
+    92.02
+   ],
+   [
+    "não",
+    92.02,
+    92.28
+   ],
+   [
+    "aconteceu",
+    92.28,
+    92.68
+   ],
+   [
+    "num",
+    92.68,
+    92.9
+   ],
+   [
+    "dia",
+    92.9,
+    93.16
+   ],
+   [
+    "só:",
+    93.16,
+    93.4
+   ],
+   [
+    "foi",
+    93.76,
+    93.84
+   ],
+   [
+    "um",
+    93.84,
+    94.02
+   ],
+   [
+    "afastamento",
+    94.02,
+    94.58
+   ],
+   [
+    "lento.",
+    94.58,
+    94.92
+   ]
+  ],
+  "l14": [
+   [
+    "O",
+    96.5,
+    96.7
+   ],
+   [
+    "golpe",
+    96.7,
+    97.0
+   ],
+   [
+    "mais",
+    97.0,
+    97.26
+   ],
+   [
+    "duro",
+    97.26,
+    97.52
+   ],
+   [
+    "veio",
+    97.52,
+    97.72
+   ],
+   [
+    "em",
+    97.72,
+    97.96
+   ],
+   [
+    "1204:",
+    97.96,
+    99.08
+   ],
+   [
+    "cruzados",
+    99.5,
+    99.88
+   ],
+   [
+    "saquearam",
+    99.88,
+    100.42
+   ],
+   [
+    "Constantinopla,",
+    100.42,
+    101.4
+   ],
+   [
+    "uma",
+    101.64,
+    101.82
+   ],
+   [
+    "cidade",
+    101.82,
+    102.14
+   ],
+   [
+    "cristã.",
+    102.14,
+    102.62
+   ]
+  ],
+  "l15": [
+   [
+    "Depois",
+    103.072,
+    103.512
+   ],
+   [
+    "disso,",
+    103.512,
+    103.912
+   ],
+   [
+    "a",
+    104.172,
+    104.252
+   ],
+   [
+    "ferida",
+    104.252,
+    104.552
+   ],
+   [
+    "ficou",
+    104.552,
+    104.792
+   ],
+   [
+    "muito",
+    104.792,
+    105.252
+   ],
+   [
+    "mais",
+    105.252,
+    105.512
+   ],
+   [
+    "difícil",
+    105.512,
+    105.852
+   ],
+   [
+    "de",
+    105.852,
+    106.092
+   ],
+   [
+    "fechar.",
+    106.092,
+    106.412
+   ]
+  ],
+  "l16": [
+   [
+    "E",
+    108.5,
+    108.68
+   ],
+   [
+    "o",
+    108.68,
+    108.84
+   ],
+   [
+    "final?",
+    108.84,
+    109.06
+   ],
+   [
+    "Em",
+    109.96,
+    110.2
+   ],
+   [
+    "1965,",
+    110.2,
+    111.5
+   ],
+   [
+    "o",
+    111.98,
+    112.08
+   ],
+   [
+    "papa",
+    112.08,
+    112.28
+   ],
+   [
+    "Paulo",
+    112.28,
+    112.62
+   ],
+   [
+    "VI",
+    112.62,
+    112.92
+   ],
+   [
+    "e",
+    112.92,
+    113.08
+   ],
+   [
+    "o",
+    113.08,
+    113.2
+   ],
+   [
+    "patriarca",
+    113.2,
+    113.66
+   ],
+   [
+    "Atenágoras",
+    113.92,
+    114.07
+   ],
+   [
+    "retiraram",
+    114.18,
+    114.64
+   ],
+   [
+    "as",
+    114.64,
+    114.84
+   ],
+   [
+    "excomunhões",
+    115.09,
+    115.24
+   ],
+   [
+    "de",
+    115.34,
+    115.6
+   ],
+   [
+    "1054.",
+    115.6,
+    116.34
+   ]
+  ],
+  "l17": [
+   [
+    "Mas",
+    118.0,
+    118.24
+   ],
+   [
+    "a",
+    118.24,
+    118.48
+   ],
+   [
+    "separação",
+    118.48,
+    118.98
+   ],
+   [
+    "continua:",
+    118.98,
+    119.44
+   ],
+   [
+    "hoje",
+    119.9,
+    120.16
+   ],
+   [
+    "existem",
+    120.16,
+    120.48
+   ],
+   [
+    "católicos",
+    120.48,
+    121.12
+   ],
+   [
+    "e",
+    121.12,
+    121.24
+   ],
+   [
+    "ortodoxos,",
+    121.24,
+    122.02
+   ],
+   [
+    "com",
+    122.2,
+    122.38
+   ],
+   [
+    "muita",
+    122.38,
+    122.66
+   ],
+   [
+    "fé",
+    122.66,
+    122.84
+   ],
+   [
+    "em",
+    122.84,
+    123.0
+   ],
+   [
+    "comum…",
+    123.0,
+    123.24
+   ],
+   [
+    "e",
+    123.24,
+    123.76
+   ],
+   [
+    "diferenças",
+    123.76,
+    124.3
+   ],
+   [
+    "que",
+    124.3,
+    124.48
+   ],
+   [
+    "nasceram",
+    124.48,
+    124.86
+   ],
+   [
+    "lá",
+    124.86,
+    125.12
+   ],
+   [
+    "atrás.",
+    125.12,
+    125.34
+   ]
+  ],
+  "l18": [
+   [
+    "Você",
+    127.0,
+    127.32
+   ],
+   [
+    "sabia",
+    127.32,
+    127.7
+   ],
+   [
+    "que",
+    127.7,
+    127.94
+   ],
+   [
+    "eles",
+    127.94,
+    128.12
+   ],
+   [
+    "já",
+    128.12,
+    128.32
+   ],
+   [
+    "foram",
+    128.32,
+    128.46
+   ],
+   [
+    "uma",
+    128.46,
+    128.68
+   ],
+   [
+    "Igreja",
+    128.68,
+    129.1
+   ],
+   [
+    "só?",
+    129.1,
+    129.34
+   ],
+   [
+    "Porque",
+    129.96,
+    130.11
+   ],
+   [
+    "tudo",
+    130.58,
+    130.84
+   ],
+   [
+    "começou",
+    130.84,
+    131.32
+   ],
+   [
+    "em…",
+    131.32,
+    132.16
+   ]
+  ]
+ },
+ "cues": [
+  {
+   "line": "l01",
+   "t0": 0.37,
+   "t1": 3.89,
+   "text": "Em 1054, a Igreja se partiu ao meio."
+  },
+  {
+   "line": "l01",
+   "t0": 4.09,
+   "t1": 7.356,
+   "text": "E uma das brigas era por causa de uma única palavra."
+  },
+  {
+   "line": "l02",
+   "t0": 7.396,
+   "t1": 9.276,
+   "text": "E o mais estranho: a excomunhão"
+  },
+  {
+   "line": "l02",
+   "t0": 9.316,
+   "t1": 10.896,
+   "text": "foi entregue em nome de um papa…"
+  },
+  {
+   "line": "l02",
+   "t0": 10.936,
+   "t1": 12.365,
+   "text": "que já tinha morrido."
+  },
+  {
+   "line": "l03",
+   "t0": 12.405,
+   "t1": 14.265,
+   "text": "Fica comigo, porque o final dessa"
+  },
+  {
+   "line": "l03",
+   "t0": 14.305,
+   "t1": 17.165,
+   "text": "história só chegou novecentos anos depois."
+  },
+  {
+   "line": "l04",
+   "t0": 18.32,
+   "t1": 19.98,
+   "text": "Durante séculos, os cristãos"
+  },
+  {
+   "line": "l04",
+   "t0": 20.02,
+   "t1": 22.34,
+   "text": "dividiam o mesmo mapa: no Ocidente,"
+  },
+  {
+   "line": "l04",
+   "t0": 22.38,
+   "t1": 25.2,
+   "text": "a Igreja de Roma, que falava latim."
+  },
+  {
+   "line": "l04",
+   "t0": 25.24,
+   "t1": 28.635,
+   "text": "No Oriente, Constantinopla, que falava grego."
+  },
+  {
+   "line": "l05",
+   "t0": 28.675,
+   "t1": 31.575,
+   "text": "E os dois lados foram se afastando: na língua,"
+  },
+  {
+   "line": "l05",
+   "t0": 31.615,
+   "t1": 33.555,
+   "text": "nos costumes e na política."
+  },
+  {
+   "line": "l06",
+   "t0": 34.47,
+   "t1": 37.05,
+   "text": "Primeira briga: quem manda?"
+  },
+  {
+   "line": "l06",
+   "t0": 37.09,
+   "t1": 41.15,
+   "text": "Roma dizia que o papa tinha autoridade sobre toda a Igreja."
+  },
+  {
+   "line": "l06",
+   "t0": 41.31,
+   "t1": 44.37,
+   "text": "Constantinopla via o papa como o primeiro entre iguais."
+  },
+  {
+   "line": "l07",
+   "t0": 45.89,
+   "t1": 48.49,
+   "text": "Segunda briga: a tal palavra."
+  },
+  {
+   "line": "l07",
+   "t0": 48.75,
+   "t1": 50.83,
+   "text": "No Ocidente, o Credo passou a dizer"
+  },
+  {
+   "line": "l07",
+   "t0": 50.87,
+   "t1": 52.67,
+   "text": "que o Espírito Santo procede do Pai…"
+  },
+  {
+   "line": "l07",
+   "t0": 52.71,
+   "t1": 56.302,
+   "text": "e do Filho. Em latim: Filioque."
+  },
+  {
+   "line": "l08",
+   "t0": 56.342,
+   "t1": 58.142,
+   "text": "No Oriente, isso foi visto como"
+  },
+  {
+   "line": "l08",
+   "t0": 58.182,
+   "t1": 60.802,
+   "text": "mexer num texto aprovado em concílio."
+  },
+  {
+   "line": "l09",
+   "t0": 61.47,
+   "t1": 64.53,
+   "text": "Terceira briga: até o pão da missa."
+  },
+  {
+   "line": "l09",
+   "t0": 64.57,
+   "t1": 67.27,
+   "text": "Roma usava pão sem fermento."
+  },
+  {
+   "line": "l09",
+   "t0": 67.31,
+   "t1": 69.69,
+   "text": "Constantinopla, pão com fermento."
+  },
+  {
+   "line": "l10",
+   "t0": 70.52,
+   "t1": 74.1,
+   "text": "Em 1054, os enviados de Roma colocaram uma bula"
+  },
+  {
+   "line": "l10",
+   "t0": 74.14,
+   "t1": 76.472,
+   "text": "de excomunhão no altar da Hagia Sophia."
+  },
+  {
+   "line": "l11",
+   "t0": 76.512,
+   "t1": 78.312,
+   "text": "E o patriarca de Constantinopla"
+  },
+  {
+   "line": "l11",
+   "t0": 78.352,
+   "t1": 80.712,
+   "text": "respondeu excomungando os enviados."
+  },
+  {
+   "line": "l12",
+   "t0": 81.82,
+   "t1": 85.0,
+   "text": "Só que o papa Leão IX, que tinha mandado a missão,"
+  },
+  {
+   "line": "l12",
+   "t0": 85.04,
+   "t1": 87.5,
+   "text": "já tinha morrido três meses antes."
+  },
+  {
+   "line": "l13",
+   "t0": 89.12,
+   "t1": 91.9,
+   "text": "Por isso, muitos historiadores dizem que a separação"
+  },
+  {
+   "line": "l13",
+   "t0": 91.94,
+   "t1": 95.52,
+   "text": "não aconteceu num dia só: foi um afastamento lento."
+  },
+  {
+   "line": "l14",
+   "t0": 96.42,
+   "t1": 99.38,
+   "text": "O golpe mais duro veio em 1204:"
+  },
+  {
+   "line": "l14",
+   "t0": 99.42,
+   "t1": 101.52,
+   "text": "cruzados saquearam Constantinopla,"
+  },
+  {
+   "line": "l14",
+   "t0": 101.56,
+   "t1": 102.952,
+   "text": "uma cidade cristã."
+  },
+  {
+   "line": "l15",
+   "t0": 102.992,
+   "t1": 107.012,
+   "text": "Depois disso, a ferida ficou muito mais difícil de fechar."
+  },
+  {
+   "line": "l16",
+   "t0": 108.42,
+   "t1": 109.84,
+   "text": "E o final?"
+  },
+  {
+   "line": "l16",
+   "t0": 109.88,
+   "t1": 113.8,
+   "text": "Em 1965, o papa Paulo VI e o patriarca"
+  },
+  {
+   "line": "l16",
+   "t0": 113.84,
+   "t1": 116.94,
+   "text": "Atenágoras retiraram as excomunhões de 1054."
+  },
+  {
+   "line": "l17",
+   "t0": 117.92,
+   "t1": 120.04,
+   "text": "Mas a separação continua: hoje"
+  },
+  {
+   "line": "l17",
+   "t0": 120.08,
+   "t1": 122.08,
+   "text": "existem católicos e ortodoxos,"
+  },
+  {
+   "line": "l17",
+   "t0": 122.12,
+   "t1": 125.94,
+   "text": "com muita fé em comum… e diferenças que nasceram lá atrás."
+  },
+  {
+   "line": "l18",
+   "t0": 126.92,
+   "t1": 129.84,
+   "text": "Você sabia que eles já foram uma Igreja só?"
+  },
+  {
+   "line": "l18",
+   "t0": 129.88,
+   "t1": 131.902,
+   "text": "Porque tudo começou em…"
+  }
+ ]
+}
