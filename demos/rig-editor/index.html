@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Rig editor</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--bg:#15171f;--panel:#1e2130;--line:#33384d;--fg:#e8eaf2;--mut:#8a90a8;--acc:#ffd65a}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1.35 system-ui,sans-serif}
+#app{display:flex;height:100vh}#stage{flex:1;display:flex;align-items:center;justify-content:center;min-width:0;padding:8px}
+canvas{height:100%;max-height:calc(100vh - 16px);aspect-ratio:9/16;max-width:100%;background:#20232f;border-radius:8px;cursor:grab}
+#side{width:300px;overflow:auto;background:var(--panel);border-left:1px solid var(--line);padding:12px}
+h1{font-size:15px;margin:0 0 4px}p.hint{color:var(--mut);margin:0 0 10px;font-size:12px}
+.bone{display:flex;align-items:center;gap:6px;padding:5px 6px;border-radius:6px;cursor:pointer}.bone:hover{background:#262a3c}.bone.sel{background:#3a3214;outline:1px solid var(--acc)}
+.bone small{color:var(--mut);margin-left:auto}fieldset{border:1px solid var(--line);border-radius:8px;margin:10px 0;padding:8px}legend{color:var(--mut);font-size:12px}
+button{background:#2b3046;color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:6px 9px;cursor:pointer;font:inherit}button:hover{border-color:var(--acc)}
+button.pri{background:var(--acc);color:#1a1030;border-color:var(--acc);font-weight:600}.row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:4px 0}
+input[type=range]{width:100%}#status{margin-top:8px;font-size:12px;color:var(--mut);white-space:pre-wrap}kbd{background:#2b3046;border-radius:4px;padding:0 4px;font-size:11px}
+@media (max-width:760px){#app{flex-direction:column}#side{width:auto;height:45vh;border-left:0;border-top:1px solid var(--line)}canvas{height:52vh}}
+</style></head><body><div id="app"><div id="stage"><canvas id="c" width="1080" height="1920"></canvas></div>
+<div id="side">
+ <h1>Editor de encaixe</h1>
+ <p class="hint">Clique numa peça e arraste. <kbd>←↑→↓</kbd> 1 px (<kbd>Shift</kbd> 10) · <kbd>[</kbd> <kbd>]</kbd> tamanho · <kbd>PgUp</kbd>/<kbd>PgDn</kbd> frente/trás · <kbd>Ctrl</kbd>+<kbd>Z</kbd> desfazer. Arrastar o quadril move a referência.</p>
+ <div id="bones"></div>
+ <fieldset><legend>Peça selecionada</legend>
+  <div class="row"><button id="zdn">trás</button><button id="zup">frente</button><button id="sdn">− tamanho</button><button id="sup">+ tamanho</button></div>
+  <div class="row" id="selinfo"></div>
+  <label>Testar a junta (não é salvo): <span id="angv">0°</span><input type="range" id="ang" min="-180" max="180" value="0"></label>
+  <div class="row"><button id="angz">zerar junta</button><button id="reset">desfazer ajustes desta peça</button></div>
+ </fieldset>
+ <fieldset><legend>Visualização</legend>
+  <label><input type="checkbox" id="ref" checked> referência ao fundo</label> <input type="range" id="refa" min="0" max="100" value="45">
+  <label><input type="checkbox" id="dbg" checked> pivôs e ossos</label><br>
+  <label>zoom <input type="range" id="zoom" min="60" max="220" value="100"></label>
+  <div class="row"><button id="play">▶ tocar atuação (12 s)</button></div>
+ </fieldset>
+ <div class="row"><button class="pri" id="save">Salvar</button><button id="undo">Desfazer</button></div>
+ <div id="status"></div>
+</div></div>
+<script type="module" src="editor.js"></script></body></html>

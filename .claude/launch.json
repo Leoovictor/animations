@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "rig-editor", "runtimeExecutable": "python3", "runtimeArgs": ["tools/rig_editor_server.py", "8765"], "port": 8765, "url": "http://localhost:8765" }
+  ]
+}

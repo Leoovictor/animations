@@ -3,7 +3,7 @@
 // Pure: compute(pose) depends only on the manifest and the pose, never on the previous frame (Opuscar renders out of order).
 //
 // Manifest (assets/characters/<name>/rig.json):
-//   bones:   [{ id, parent|null, image, pivot:[px,py] (rotation point, image px), position:[x,y] (this pivot in the parent's frame,
+//   bones:   [{ id, parent|null, image, pivot:[px,py] (rotation point, image px), scale? (image only), position:[x,y] (this pivot in the parent's frame,
 //              i.e. relative to the parent's pivot, parent image px), z, limits:[minDeg,maxDeg]?, rest:deg? }]   parents before children
 //   sockets: { name: { bone, at:[px,py] (image px of that bone) } }
 // Pose: { root: { x, y, scale, flip, angle }, angles: { boneId: deg }, images: { boneId: imageKey }? }
@@ -52,7 +52,7 @@ export class Rig {
   }
   socket(name, pose, frame) {
     const s = this.sockets[name]; if (!s) throw new Error('no socket ' + name); const b = this.byId[s.bone], F = frame || this.compute(pose);
-    return ap(F.W[s.bone], [s.at[0] - b.pivot[0], s.at[1] - b.pivot[1]]);
+    const k = b.scale ?? 1; return ap(F.W[s.bone], [(s.at[0] - b.pivot[0]) * k, (s.at[1] - b.pivot[1]) * k]);
   }
   // solve a two-bone chain so socket `end` reaches the world point `target`; returns { angles: {upper, lower}, reached, error }
   solve(pose, upper, lower, end, target, bend = 1) {
@@ -73,8 +73,9 @@ export class Rig {
     const F = this.compute(pose); g.save();
     if (o.alpha != null) g.globalAlpha *= o.alpha;
     for (const id of this.order) {
+      if (o.only && !o.only.includes(id)) continue;
       const b = this.byId[id], key = pose.images?.[id] ?? b.image; if (!key) continue; const im = images[key]; if (!im) throw new Error(`rig ${id}: image ${key} not loaded`);
-      const M = o.base ? mul(o.base, F.W[id]) : F.W[id]; g.setTransform(...M); g.drawImage(im, -b.pivot[0], -b.pivot[1]);
+      const M = o.base ? mul(o.base, F.W[id]) : F.W[id], k = b.scale ?? 1; g.setTransform(...M); if (k !== 1) g.scale(k, k); g.drawImage(im, -b.pivot[0], -b.pivot[1]);   // scale: the image only, not the children
     }
     g.restore(); return F;
   }

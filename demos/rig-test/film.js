@@ -36,6 +36,10 @@ function render(t) {
   if (Q.get('ref') && REF) {   // fit check: the reference figure (left), the rig at rest (right), and the rig drawn over the reference (centre)
     const place = x => ({ ...pose(0, x), angles: {} }), p0 = place(0), F = RIG.compute(p0), hb = RIG.byId.head, top = F.W.head[5] + F.W.head[3] * (0 - hb.pivot[1]);
     const h = GROUND - top, w = REF.width * h / REF.height;   // the reference figure scaled to the rig's height: compares shape, not size
+    if (Q.get('ref') === 'solo' || Q.get('only')) {   // for tools/fit_rig.py: the reference alone, or one bone alone, flat background, same placement
+      g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = '#00ff00'; g.fillRect(0, 0, W, H);
+      if (Q.get('only')) RIG.draw(g, place(540), IMG, { only: Q.get('only').split(',') }); else g.drawImage(REF, 540 - w / 2, GROUND - h, w, h);
+      return; }
     for (const [x, rig, ref] of [[200, false, true], [540, true, true], [880, true, false]]) {
       const p = place(x); if (ref) { g.save(); g.globalAlpha = rig ? .45 : 1; g.drawImage(REF, x - w / 2, GROUND - h, w, h); g.restore(); }
       if (rig) { g.save(); g.globalAlpha = ref ? .7 : 1; RIG.draw(g, p, IMG); g.restore(); } }

@@ -3,3 +3,4 @@ out/
 voices/*.wav
 *.log
 .DS_Store
+assets/characters/*/backups/
