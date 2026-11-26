@@ -1,9 +1,9 @@
 """Local server for the rig editor (demos/rig-editor). Serves the repository and saves the edited plan.
-Usage: python3 tools/rig_editor_server.py [port]   then open http://localhost:<port>/demos/rig-editor/?char=zeus
+Usage: python3 tools/rig_editor_server.py [port] [--no-open]   opens the editor in the browser (also when it is already running): http://localhost:<port>/demos/rig-editor/?char=zeus
 POST /api/save?char=<name>  body = rig_plan.json  →  keeps a backup, writes assets/characters/<name>/rig_plan.json, runs tools/assemble_rig.py.
 Listens on 127.0.0.1 only."""
-import http.server, json, os, re, shutil, subprocess, sys, time, urllib.parse
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8765
+import http.server, json, os, re, shutil, subprocess, sys, time, urllib.parse, webbrowser
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); PORT = next((int(a) for a in sys.argv[1:] if a.isdigit()), 8765)
 class H(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *a, **k): super().__init__(*a, directory=ROOT, **k)
     def end_headers(self): self.send_header('Cache-Control', 'no-store'); super().end_headers()
@@ -24,6 +24,9 @@ class H(http.server.SimpleHTTPRequestHandler):
 URL = f'http://localhost:{PORT}/demos/rig-editor/?char=zeus'
 try: srv = http.server.ThreadingHTTPServer(('127.0.0.1', PORT), H)
 except OSError as e:
-    if e.errno in (48, 98): sys.exit(f'A porta {PORT} já está em uso: o editor provavelmente já está rodando. Abra {URL}\n(ou use outra porta: python3 tools/rig_editor_server.py 8766)')
+    if e.errno in (48, 98):   # already running: just open it
+        print(f'O editor já está rodando na porta {PORT}. Abrindo {URL}'); webbrowser.open(URL); sys.exit(0)
     raise
-print('rig editor:', URL, flush=True); srv.serve_forever()
+print('Editor aberto em', URL, '(Ctrl+C para parar)', flush=True)
+if '--no-open' not in sys.argv: webbrowser.open(URL)
+srv.serve_forever()
