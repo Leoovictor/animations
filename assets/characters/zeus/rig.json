@@ -130,8 +130,8 @@
    "parent": "upperArmF",
    "image": "parts/forearmF_fist.png",
    "pivot": [
-    287.2,
-    81.5
+    223.5,
+    65.4
    ],
    "z": 0,
    "position": [
@@ -209,8 +209,8 @@
   "handF": {
    "bone": "forearmF",
    "at": [
-    238.0,
-    459.0
+    200.9,
+    445.5
    ]
   },
   "footN": {

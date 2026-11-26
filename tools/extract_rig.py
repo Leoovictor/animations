@@ -45,6 +45,10 @@ for sheet, c in cfg.items():
     for (sl, lid), name in zip(comps, names):
         ys, xs = sl; pad = 12; y0, y1 = max(ys.start - pad, 0), min(ys.stop + pad, a.shape[0]); x0, x1 = max(xs.start - pad, 0), min(xs.stop + pad, a.shape[1])
         sc = c.get('piece_scale', {}).get(name, sc0)
+        if name in c.get('match', {}):                                                         # size it like another piece: same joint-to-joint length
+            pm = [blobs(mag[ys.start:ys.stop, xs.start:xs.stop], 30), blobs(cya[ys.start:ys.stop, xs.start:xs.stop], 30)]
+            ref = pieces[c['match'][name]]; Lr = np.hypot(ref['attach'][0][0] - ref['pivot'][0], ref['attach'][0][1] - ref['pivot'][1])
+            if pm[0] and pm[1]: sc = Lr / np.hypot(pm[1][0][0] - pm[0][0][0], pm[1][0][1] - pm[0][0][1])
         own = ndi.binary_dilation(lab[y0:y1, x0:x1] == lid, iterations=2)
         cm, cc = mag[y0:y1, x0:x1] & own, cya[y0:y1, x0:x1] & own
         piv, att = blobs(cm, 30), blobs(cc, 30)

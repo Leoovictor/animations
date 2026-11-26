@@ -56,4 +56,11 @@ SHEETS = [
   "and the big fist; 6) the thigh (the part hidden under the skirt, completed); 7) the shin with the sandal and foot. " + MARK + " Magenta and cyan dots: head MAGENTA at the bottom of the neck; "
   "torso MAGENTA at the waist, CYAN at the base of the neck and CYAN at the shoulder; skirt MAGENTA at the waist, CYAN at the hip joint; upper arm MAGENTA at the shoulder, CYAN at the elbow; "
   "forearm MAGENTA at the elbow, CYAN at the fist centre; thigh MAGENTA at the hip, CYAN at the knee; shin MAGENTA at the knee, CYAN on the ground under the ankle. No text, no labels."),
+ dict(name="zeus_fist_inner", aspect="16:9", ref="zeus_exploded.png", refs=["ref_fist_inner.png"], edit=True, prompt="Edit this image. "
+  "Keep exactly the same drawing style, colours, outline thickness and size as the forearm with the gold cuff and the fist in this image (bottom row, second piece), "
+  "and produce ONE single new piece, large and centred on the same flat green background, with nothing else in the image: the same forearm with the same gold cuff, "
+  "but the fist seen from the INSIDE of the hand, the palm side: the four fingers curled into the palm with their fingertips and folded joints visible, "
+  "and the thumb wrapped across the front of the fingers, like the second attached reference photo of a raised fist (use it only for the shape of the hand). "
+  "Same chibi proportions: short thick forearm, big round fist. The forearm hangs straight down with the fist at the bottom. " + MARK +
+  " MAGENTA at the elbow at the top of the forearm, CYAN at the centre of the fist. No text, no labels."),
 ]

@@ -105,22 +105,6 @@
   ],
   "pivots_found": 1
  },
- "forearmF_fist": {
-  "sheet": "zeus_exploded",
-  "w": 496,
-  "h": 677,
-  "pivot": [
-   287.2,
-   81.5
-  ],
-  "attach": [
-   [
-    238.0,
-    459.0
-   ]
-  ],
-  "pivots_found": 1
- },
  "thigh": {
   "sheet": "zeus_exploded",
   "w": 420,
@@ -258,6 +242,22 @@
    [
     609.9,
     141.4
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "forearmF_fist": {
+  "sheet": "zeus_fist_inner",
+  "w": 454,
+  "h": 718,
+  "pivot": [
+   223.5,
+   65.4
+  ],
+  "attach": [
+   [
+    200.9,
+    445.5
    ]
   ],
   "pivots_found": 1
