@@ -1,0 +1,173 @@
+{
+ "_about": "Which piece hangs from which attachment point of its parent (index into the parent's attach list, top→bottom then left→right; 'pivot' = the parent's own pivot). Assembled into rig.json by tools/assemble_rig.py. Facing right: N = near side (drawn in front), F = far side (behind). offset: a small manual nudge (parent px) on top of the measured position, e.g. to tuck the neck under the beard.",
+ "view": "side",
+ "viewScale": 0.5,
+ "bones": [
+  {
+   "id": "hips",
+   "parent": null,
+   "piece": "hips",
+   "z": 5
+  },
+  {
+   "id": "thighF",
+   "parent": "hips",
+   "piece": "thighF",
+   "at": 0,
+   "z": 1,
+   "limits": [
+    -100,
+    70
+   ]
+  },
+  {
+   "id": "shinF",
+   "parent": "thighF",
+   "piece": "shinF",
+   "at": 0,
+   "z": 1,
+   "limits": [
+    0,
+    150
+   ]
+  },
+  {
+   "id": "thighN",
+   "parent": "hips",
+   "piece": "thighN",
+   "at": 1,
+   "z": 4,
+   "limits": [
+    -100,
+    70
+   ]
+  },
+  {
+   "id": "shinN",
+   "parent": "thighN",
+   "piece": "shinN",
+   "at": 0,
+   "z": 4,
+   "limits": [
+    0,
+    150
+   ]
+  },
+  {
+   "id": "torso",
+   "parent": "hips",
+   "piece": "torso",
+   "at": "pivot",
+   "z": 6,
+   "limits": [
+    -25,
+    25
+   ]
+  },
+  {
+   "id": "upperArmF",
+   "parent": "torso",
+   "piece": "upperArmF",
+   "at": 1,
+   "z": 2,
+   "limits": [
+    -170,
+    80
+   ]
+  },
+  {
+   "id": "forearmF",
+   "parent": "upperArmF",
+   "piece": "forearmF_open",
+   "at": 0,
+   "z": 2,
+   "limits": [
+    -150,
+    0
+   ]
+  },
+  {
+   "id": "head",
+   "parent": "torso",
+   "piece": "head_smile",
+   "at": 0,
+   "z": 9,
+   "limits": [
+    -30,
+    35
+   ],
+   "offset": [
+    0,
+    16
+   ]
+  },
+  {
+   "id": "upperArmN",
+   "parent": "torso",
+   "piece": "upperArmN",
+   "at": 2,
+   "z": 8,
+   "limits": [
+    -170,
+    80
+   ]
+  },
+  {
+   "id": "forearmN",
+   "parent": "upperArmN",
+   "piece": "forearmN_open",
+   "at": 0,
+   "z": 8,
+   "limits": [
+    -150,
+    0
+   ]
+  }
+ ],
+ "sockets": {
+  "handN": [
+   "forearmN",
+   0
+  ],
+  "handF": [
+   "forearmF",
+   0
+  ],
+  "footN": [
+   "shinN",
+   0
+  ],
+  "footF": [
+   "shinF",
+   0
+  ]
+ },
+ "variants": {
+  "head": {
+   "smile": "head_smile",
+   "surprised": "head_surprised",
+   "shout": "head_shout"
+  },
+  "forearmN": {
+   "open": "forearmN_open",
+   "fist": "forearmN_fist"
+  }
+ },
+ "chains": {
+  "arm": [
+   "upperArmN",
+   "forearmN",
+   "handN"
+  ],
+  "legN": [
+   "thighN",
+   "shinN",
+   "footN"
+  ],
+  "legF": [
+   "thighF",
+   "shinF",
+   "footF"
+  ]
+ }
+}

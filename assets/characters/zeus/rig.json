@@ -1,0 +1,258 @@
+{
+ "view": "side",
+ "viewScale": 0.5,
+ "bones": [
+  {
+   "id": "hips",
+   "parent": null,
+   "image": "parts/hips.png",
+   "pivot": [
+    288.8,
+    69.3
+   ],
+   "z": 5,
+   "position": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "thighF",
+   "parent": "hips",
+   "image": "parts/thighF.png",
+   "pivot": [
+    107.6,
+    45.6
+   ],
+   "z": 1,
+   "position": [
+    -177.8,
+    38.5
+   ],
+   "limits": [
+    -100,
+    70
+   ]
+  },
+  {
+   "id": "shinF",
+   "parent": "thighF",
+   "image": "parts/shinF.png",
+   "pivot": [
+    106.8,
+    42.9
+   ],
+   "z": 1,
+   "position": [
+    104.0,
+    307.4
+   ],
+   "limits": [
+    0,
+    150
+   ]
+  },
+  {
+   "id": "thighN",
+   "parent": "hips",
+   "image": "parts/thighN.png",
+   "pivot": [
+    104.6,
+    45.3
+   ],
+   "z": 4,
+   "position": [
+    174.1,
+    38.0
+   ],
+   "limits": [
+    -100,
+    70
+   ]
+  },
+  {
+   "id": "shinN",
+   "parent": "thighN",
+   "image": "parts/shinN.png",
+   "pivot": [
+    106.2,
+    43.0
+   ],
+   "z": 4,
+   "position": [
+    93.9,
+    305.5
+   ],
+   "limits": [
+    0,
+    150
+   ]
+  },
+  {
+   "id": "torso",
+   "parent": "hips",
+   "image": "parts/torso.png",
+   "pivot": [
+    265.3,
+    436.0
+   ],
+   "z": 6,
+   "position": [
+    0.0,
+    0.0
+   ],
+   "limits": [
+    -25,
+    25
+   ]
+  },
+  {
+   "id": "upperArmF",
+   "parent": "torso",
+   "image": "parts/upperArmF.png",
+   "pivot": [
+    115.9,
+    46.0
+   ],
+   "z": 2,
+   "position": [
+    -210.6,
+    -280.8
+   ],
+   "limits": [
+    -170,
+    80
+   ]
+  },
+  {
+   "id": "forearmF",
+   "parent": "upperArmF",
+   "image": "parts/forearmF_open.png",
+   "pivot": [
+    87.1,
+    40.8
+   ],
+   "z": 2,
+   "position": [
+    43.4,
+    309.7
+   ],
+   "limits": [
+    -150,
+    0
+   ]
+  },
+  {
+   "id": "head",
+   "parent": "torso",
+   "image": "parts/head_smile.png",
+   "pivot": [
+    498.4,
+    899.6
+   ],
+   "z": 9,
+   "position": [
+    -10.1,
+    -378.0
+   ],
+   "limits": [
+    -30,
+    35
+   ]
+  },
+  {
+   "id": "upperArmN",
+   "parent": "torso",
+   "image": "parts/upperArmN.png",
+   "pivot": [
+    123.8,
+    45.8
+   ],
+   "z": 8,
+   "position": [
+    184.8,
+    -280.8
+   ],
+   "limits": [
+    -170,
+    80
+   ]
+  },
+  {
+   "id": "forearmN",
+   "parent": "upperArmN",
+   "image": "parts/forearmN_open.png",
+   "pivot": [
+    86.3,
+    40.7
+   ],
+   "z": 8,
+   "position": [
+    28.0,
+    300.2
+   ],
+   "limits": [
+    -150,
+    0
+   ]
+  }
+ ],
+ "sockets": {
+  "handN": {
+   "bone": "forearmN",
+   "at": [
+    242.6,
+    215.1
+   ]
+  },
+  "handF": {
+   "bone": "forearmF",
+   "at": [
+    247.4,
+    219.2
+   ]
+  },
+  "footN": {
+   "bone": "shinN",
+   "at": [
+    128.6,
+    332.9
+   ]
+  },
+  "footF": {
+   "bone": "shinF",
+   "at": [
+    128.5,
+    332.8
+   ]
+  }
+ },
+ "variants": {
+  "head": {
+   "smile": "parts/head_smile.png",
+   "surprised": "parts/head_surprised.png",
+   "shout": "parts/head_shout.png"
+  },
+  "forearmN": {
+   "open": "parts/forearmN_open.png",
+   "fist": "parts/forearmN_fist.png"
+  }
+ },
+ "chains": {
+  "arm": [
+   "upperArmN",
+   "forearmN",
+   "handN"
+  ],
+  "legN": [
+   "thighN",
+   "shinN",
+   "footN"
+  ],
+  "legF": [
+   "thighF",
+   "shinF",
+   "footF"
+  ]
+ }
+}

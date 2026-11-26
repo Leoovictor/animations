@@ -1,0 +1,48 @@
+{
+ "_about": "Piece names per sheet in reading order (rows top→bottom, then left→right). scale: size factor so every sheet matches the model sheet's proportions (tuned in the rig viewer). darken: the far limbs, drawn behind the body. piece_scale: per-piece factor measured against the model sheet's side view (head height as the unit), then tuned in the viewer.",
+ "zeus_parts_a": {
+  "scale": 1.0,
+  "names": [
+   "head_smile",
+   "head_surprised",
+   "head_shout",
+   "torso",
+   "hips"
+  ],
+  "piece_scale": {
+   "torso": 0.6,
+   "hips": 0.74
+  }
+ },
+ "zeus_parts_b": {
+  "scale": 1.0,
+  "names": [
+   "upperArmN",
+   "forearmN_open",
+   "forearmN_fist",
+   "upperArmF",
+   "forearmF_open",
+   "thighN",
+   "shinN",
+   "thighF",
+   "shinF"
+  ],
+  "darken": [
+   "upperArmF",
+   "forearmF_open",
+   "thighF",
+   "shinF"
+  ],
+  "piece_scale": {
+   "upperArmN": 0.71,
+   "upperArmF": 0.71,
+   "forearmN_open": 0.63,
+   "forearmN_fist": 0.63,
+   "forearmF_open": 0.63,
+   "thighN": 0.7,
+   "thighF": 0.7,
+   "shinN": 0.66,
+   "shinF": 0.66
+  }
+ }
+}

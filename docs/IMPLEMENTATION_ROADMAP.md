@@ -5,9 +5,10 @@ Status das fases:
 | Fase | Status |
 |---|---|
 | 0 | **concluída** |
-| 1 | aguardando a imagem de referência e a decisão sobre proporções |
+| 1 | guia v1 escrito (`docs/MYTHOLOGY_CHIBI_STYLE.md`), proporções chibi aprovadas; **imagem de referência do jogo ainda pendente** |
 | 2 (engine compartilhada) | **itens 1–3 feitos**; itens 6 e 7 com a parte de código pronta, testada num rig placeholder |
-| 3 a 8 | não iniciadas (dependem das peças do Zeus) |
+| 3 (assets e rig do Zeus) | **peças geradas, extraídas e montadas; aguardando a 1ª aprovação visual** (`assets/characters/zeus/preview.jpg`) |
+| 4 a 8 | não iniciadas |
 
 ## Progresso (2026-11-26)
 
@@ -18,7 +19,17 @@ Status das fases:
 | 3 · symlinks `demos/rig-test/{engine,assets}` | feito | o demo carrega os módulos pelo symlink no `still.mjs` |
 | 6 · visualizador `demos/rig-test` | código pronto; aceita `?rig=<rig.json>` | stills de limites, IK e espelhamento com o rig placeholder |
 | 7 · `engine/characters/rig.js` (FK, limites, IK 2 ossos com `bend` automático, sockets, flip) | código pronto | testes de FK, IK (< 1 px nas duas direções), limites, anatomia do joelho, espelhamento e determinismo; MD5 igual do frame 4.6 isolado e fora de ordem |
-| 4, 5, 8–12 | não iniciados | dependem da arte do Zeus ou de aprovação |
+| 4 · folhas do Zeus chibi (`assets/characters/zeus/sheets/`) | feito: 1 model sheet (2 gerações; a 1ª saiu com ~5 cabeças de altura e foi refeita) + 2 folhas de peças com marcadores | `zeus_model.png`, `zeus_parts_a.png`, `zeus_parts_b.png` |
+| 5 · `tools/extract_rig.py` | feito: recorta, mede pivôs (magenta) e encaixes (ciano), apaga os marcadores e o anel escuro em volta preenchendo só a partir do interior da peça, e aplica escala por peça | 14 peças, 14 pivôs; sem resíduo visível na inspeção em tamanho real |
+| 5b · `tools/assemble_rig.py` + `rig_plan.json` | feito: posições vêm dos marcadores; `offset` manual só no pescoço (+16 px) | `assets/characters/zeus/rig.json` (11 ossos, 4 sockets, variantes de rosto e de mão) |
+| 8–12 | não iniciados | dependem da aprovação do Zeus |
+
+**Limitações conhecidas do Zeus v1:**
+- Tronco e quadril saíram mais em três quartos do que de perfil, então o corpo fica em três quartos e a cabeça de perfil.
+- O ombro do braço de trás aparece um pouco "embolado".
+- A pose de repouso tem as pernas afastadas.
+- As escalas por peça foram medidas no model sheet e ainda podem ser afinadas.
+- Os limites de ângulo são genéricos e serão ajustados com os clips.
 
 **Placeholder:** `engine/tests/fixtures.mjs` é um boneco de cápsulas feito em código, só para testar a matemática. Não é arte de personagem e não entra em vídeo nenhum.
 

@@ -1,0 +1,223 @@
+{
+ "head_smile": {
+  "sheet": "zeus_parts_a",
+  "w": 869,
+  "h": 969,
+  "pivot": [
+   498.4,
+   899.6
+  ],
+  "attach": [],
+  "pivots_found": 1
+ },
+ "head_surprised": {
+  "sheet": "zeus_parts_a",
+  "w": 862,
+  "h": 964,
+  "pivot": [
+   490.6,
+   894.8
+  ],
+  "attach": [],
+  "pivots_found": 1
+ },
+ "head_shout": {
+  "sheet": "zeus_parts_a",
+  "w": 860,
+  "h": 960,
+  "pivot": [
+   485.1,
+   890.3
+  ],
+  "attach": [],
+  "pivots_found": 1
+ },
+ "torso": {
+  "sheet": "zeus_parts_a",
+  "w": 490,
+  "h": 479,
+  "pivot": [
+   265.3,
+   436.0
+  ],
+  "attach": [
+   [
+    255.2,
+    42.0
+   ],
+   [
+    54.7,
+    155.2
+   ],
+   [
+    450.1,
+    155.2
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "hips": {
+  "sheet": "zeus_parts_a",
+  "w": 571,
+  "h": 377,
+  "pivot": [
+   288.8,
+   69.3
+  ],
+  "attach": [
+   [
+    111.0,
+    107.8
+   ],
+   [
+    462.9,
+    107.3
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "upperArmN": {
+  "sheet": "zeus_parts_b",
+  "w": 258,
+  "h": 398,
+  "pivot": [
+   123.8,
+   45.8
+  ],
+  "attach": [
+   [
+    151.8,
+    346.0
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "forearmN_open": {
+  "sheet": "zeus_parts_b",
+  "w": 396,
+  "h": 345,
+  "pivot": [
+   86.3,
+   40.7
+  ],
+  "attach": [
+   [
+    242.6,
+    215.1
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "forearmN_fist": {
+  "sheet": "zeus_parts_b",
+  "w": 345,
+  "h": 336,
+  "pivot": [
+   85.6,
+   40.6
+  ],
+  "attach": [
+   [
+    241.1,
+    215.1
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "upperArmF": {
+  "sheet": "zeus_parts_b",
+  "w": 259,
+  "h": 408,
+  "pivot": [
+   115.9,
+   46.0
+  ],
+  "attach": [
+   [
+    159.3,
+    355.7
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "forearmF_open": {
+  "sheet": "zeus_parts_b",
+  "w": 409,
+  "h": 353,
+  "pivot": [
+   87.1,
+   40.8
+  ],
+  "attach": [
+   [
+    247.4,
+    219.2
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "thighN": {
+  "sheet": "zeus_parts_b",
+  "w": 302,
+  "h": 398,
+  "pivot": [
+   104.6,
+   45.3
+  ],
+  "attach": [
+   [
+    198.5,
+    350.8
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "shinN": {
+  "sheet": "zeus_parts_b",
+  "w": 343,
+  "h": 382,
+  "pivot": [
+   106.2,
+   43.0
+  ],
+  "attach": [
+   [
+    128.6,
+    332.9
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "thighF": {
+  "sheet": "zeus_parts_b",
+  "w": 313,
+  "h": 399,
+  "pivot": [
+   107.6,
+   45.6
+  ],
+  "attach": [
+   [
+    211.6,
+    353.0
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "shinF": {
+  "sheet": "zeus_parts_b",
+  "w": 345,
+  "h": 382,
+  "pivot": [
+   106.8,
+   42.9
+  ],
+  "attach": [
+   [
+    128.5,
+    332.8
+   ]
+  ],
+  "pivots_found": 1
+ }
+}

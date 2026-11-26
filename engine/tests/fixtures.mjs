@@ -15,5 +15,6 @@ export const TEST_RIG = {
     { id: 'thighL',    parent: 'pelvis',    image: 'legB',    pivot: [26, 22],  position: [-10, 20],  z: 2, limits: [-100, 70] },
     { id: 'shinL',     parent: 'thighL',    image: 'legB',    pivot: [26, 22],  position: [0, 125],   z: 2, limits: [0, 150] },
   ],
+  chains: { arm: ['upperArmR', 'forearmR', 'handR'], legN: ['thighR', 'shinR', 'footR'], legF: ['thighL', 'shinL', 'footL'] }, viewScale: 1.4,
   sockets: { handR: { bone: 'forearmR', at: [22, 122] }, handL: { bone: 'forearmL', at: [22, 122] }, footR: { bone: 'shinR', at: [26, 140] }, footL: { bone: 'shinL', at: [26, 140] }, eye: { bone: 'head', at: [100, 70] } },
 };
