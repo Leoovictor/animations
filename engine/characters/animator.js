@@ -15,10 +15,12 @@ const wrap180 = d => ((d + 180) % 360 + 360) % 360 - 180;
 export class Character {
   constructor(rig, images, o = {}) {
     this.rig = rig; this.images = images; this.clips = []; this.o = o;
-    const C = rig.m.chains || {}; this.legs = (o.legs || ['legN', 'legF']).filter(k => C[k]).map(k => C[k]);
-    // rest geometry, measured once from the manifest at angle 0: hip height and foot offsets in the stage frame
+    const C = rig.m.chains || {}, keys = (o.legs || ['legN', 'legF']).filter(k => C[k]); this.legs = keys.map(k => C[k]);
+    // legs with an ankle: the chain ends at the ankle, and soles[leg] = [foot bone, sole socket]; the foot is kept flat on the ground
+    this.soles = keys.map(k => rig.m.soles?.[k] || null);
+    // rest geometry, measured once from the manifest at angle 0: hip height and the ground contact points (soles) in the stage frame
     const F = rig.compute({ root: { x: 0, y: 0, scale: 1 } });
-    this.feet0 = this.legs.map(([, , s]) => rig.socket(s, { root: { x: 0, y: 0, scale: 1 } }, F));
+    this.feet0 = this.legs.map(([, , s], i) => rig.socket(this.soles[i] ? this.soles[i][1] : s, { root: { x: 0, y: 0, scale: 1 } }, F));
     this.hipH = Math.max(...this.feet0.map(p => p[1]));
     this.feet0 = this.feet0.map(p => [p[0], p[1] - this.hipH]);                         // feet relative to the ground point under the hips (y ≈ 0)
     this.legLen = Math.max(...this.legs.map(([th, sh, s]) => { const b = rig.byId[sh], so = rig.sockets[s]; return Math.hypot(...b.position) + Math.hypot(so.at[0] - b.pivot[0], so.at[1] - b.pivot[1]); }));
@@ -63,9 +65,14 @@ export class Character {
     const pose = { root: { x: hips[0], y: hips[1], scale: sc, flip: place.flip }, angles: { ...s.angles }, images: { ...s.images } };
     const feetW = s.feet.map(X), F0 = this.rig.compute(pose);
     this.legs.forEach(([th, sh, so], i) => {   // a target beyond reach lifts the foot along the hip→foot line instead of dragging it
-      const hip = [F0.W[th][4], F0.W[th][5]], f = feetW[i], d = Math.hypot(f[0] - hip[0], f[1] - hip[1]), max = .985 * this.reach[i] * sc;
-      if (d > max) feetW[i] = [hip[0] + (f[0] - hip[0]) * max / d, hip[1] + (f[1] - hip[1]) * max / d];
-      Object.assign(pose.angles, this.rig.solve(pose, th, sh, so, feetW[i], this.bend[i]).angles);
+      const hip = [F0.W[th][4], F0.W[th][5]], f = feetW[i];
+      let tgt = feetW[i]; const sole = this.soles[i];
+      if (sole) { const fb = this.rig.byId[sole[0]], at = this.rig.sockets[sole[1]].at, k = fb.scale ?? 1;   // the ankle sits above the sole of a flat foot
+        tgt = [f[0] + (place.flip ? -1 : 1) * sc * k * (fb.pivot[0] - at[0]), f[1] + sc * k * (fb.pivot[1] - at[1])]; }
+      const d = Math.hypot(tgt[0] - hip[0], tgt[1] - hip[1]), max = .985 * this.reach[i] * sc;   // out of reach: the foot lifts, never drags
+      if (d > max) { const lift = [hip[0] + (tgt[0] - hip[0]) * max / d - tgt[0], hip[1] + (tgt[1] - hip[1]) * max / d - tgt[1]]; tgt = [tgt[0] + lift[0], tgt[1] + lift[1]]; feetW[i] = [f[0] + lift[0], f[1] + lift[1]]; }
+      Object.assign(pose.angles, this.rig.solve(pose, th, sh, so, tgt, this.bend[i]).angles);
+      if (sole) pose.angles[sole[0]] = -((pose.angles[th] ?? 0) + (pose.angles[sh] ?? 0)) + (s.angles[sole[0]] ?? 0);   // foot flat (+ any tilt a clip asks for)
     });
     pose.feet = feetW; pose.stage = s; return pose;
   }

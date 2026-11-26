@@ -1,5 +1,5 @@
 {
- "_about": "Piece names per sheet in reading order (rows top→bottom, then left→right). v2 (profile): every body piece comes from zeus_exploded, an edit of the profile figure zeus_side, so all pieces share one scale and the chibi proportions. The surprised/shout heads come from zeus_parts_a, scaled to the exploded head. copies: the far limbs, darkened. trim: [top, bottom] fractions of a piece's height cut away (joint caps that would show at a joint that barely bends, like the waist); pivots stay where they were measured. A trim can also be {\"rect\":[x0,y0,x1,y1]} (fractions) to cut only a region, e.g. the torso's neck stump without flattening the shoulders. mirror: copies flipped left↔right (the far forearm shows the other side of the fist, so it must not be an identical copy of the near one); pivot and attach points are mirrored too. match: scale a piece so its pivot→first-attach distance equals that of another piece already extracted (used for zeus_fist_inner, the far forearm with the fist seen from the palm side, after the user's reference photo).",
+ "_about": "Piece names per sheet in reading order (rows top→bottom, then left→right). v2 (profile): every body piece comes from zeus_exploded, an edit of the profile figure zeus_side, so all pieces share one scale and the chibi proportions. The surprised/shout heads come from zeus_parts_a, scaled to the exploded head. copies: the far limbs, darkened. trim: [top, bottom] fractions of a piece's height cut away (joint caps that would show at a joint that barely bends, like the waist); pivots stay where they were measured. A trim can also be {\"rect\":[x0,y0,x1,y1]} (fractions) to cut only a region, e.g. the torso's neck stump without flattening the shoulders. mirror: copies flipped left↔right (the far forearm shows the other side of the fist, so it must not be an identical copy of the near one); pivot and attach points are mirrored too. match: scale a piece so its pivot→first-attach distance equals that of another piece already extracted (used for zeus_fist_inner, the far forearm with the fist seen from the palm side, after the user's reference photo). derive: pieces cut out of an extracted piece (keep = [top,bottom] row fractions; pivot/attach as fractions or 'src'): the shin is split at the ankle strap into shinU (leg) and footS (sandal), so the foot can stay flat.",
  "zeus_side": {
   "scale": 1.0,
   "names": [
@@ -48,6 +48,9 @@
      0.63,
      1.0
     ]
+   },
+   "shin": {
+    "bottom": 0.835
    }
   }
  },
@@ -90,5 +93,73 @@
   "match": {
    "forearmF_fist": "forearm_fist"
   }
- }
+ },
+ "derive": [
+  {
+   "name": "shinU",
+   "from": "shin",
+   "keep": [
+    0,
+    0.49
+   ],
+   "pivot": "src",
+   "attach": [
+    [
+     0.32,
+     0.466
+    ]
+   ]
+  },
+  {
+   "name": "footS",
+   "from": "shin",
+   "keep": [
+    0.385,
+    1
+   ],
+   "pivot": [
+    0.32,
+    0.466
+   ],
+   "attach": [
+    [
+     0.49,
+     0.83
+    ]
+   ]
+  },
+  {
+   "name": "shinUF",
+   "from": "shinF",
+   "keep": [
+    0,
+    0.49
+   ],
+   "pivot": "src",
+   "attach": [
+    [
+     0.32,
+     0.466
+    ]
+   ]
+  },
+  {
+   "name": "footSF",
+   "from": "shinF",
+   "keep": [
+    0.385,
+    1
+   ],
+   "pivot": [
+    0.32,
+    0.466
+   ],
+   "attach": [
+    [
+     0.49,
+     0.83
+    ]
+   ]
+  }
+ ]
 }

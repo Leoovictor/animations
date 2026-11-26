@@ -8,7 +8,7 @@ const frames = (a, b) => { const r = []; for (let f = Math.round(a * FPS); f <= 
 
 test('every clip used by the pilot exists', () => { for (const k of ['idle', 'walk', 'lookUp', 'surprised', 'anticipation', 'castLightning', 'recoil']) assert.ok(CLIPS[k]); });
 test('walk: a foot in stance stays nailed to the ground (< 2 px between frames)', () => {
-  const c = pilot(), rig = c.rig, { S, P } = { S: .32 * c.legLen, P: .9 };
+  const c = pilot(), rig = c.rig, { S, P } = { S: .18 * c.legLen, P: .9 };
   let worst = 0;
   for (const [i, foot] of [[0, 'footN'], [1, 'footF']]) {
     let prev = null, prevKey = null;
@@ -29,7 +29,7 @@ test('feet reach their IK targets over the whole pilot (< 2 px; a target out of 
 test('knees stay in front during the walk and the crouch', () => {
   const c = pilot();
   for (const t of [...frames(.3, 2.6), ...frames(7, 8.9)]) { const pose = c.poseAt(t, PLACE), F = c.rig.compute(pose);
-    for (const [th, sh, s] of [['thighN', 'shinN', 'footN'], ['thighF', 'shinF', 'footF']]) {
+    for (const [th, sh, s] of [['thighN', 'shinN', 'ankleN'], ['thighF', 'shinF', 'ankleF']]) {
       const hip = [F.W[th][4], F.W[th][5]], knee = [F.W[sh][4], F.W[sh][5]], ft = c.rig.socket(s, pose, F), side = (ft[0] - hip[0]) * (knee[1] - hip[1]) - (ft[1] - hip[1]) * (knee[0] - hip[0]);
       assert.ok(side <= 1e-6 * Math.abs(side) + 1, `knee behind at t=${t.toFixed(2)} (${th})`); } }
 });
@@ -40,8 +40,15 @@ test('no pops: joints move less than 25° per frame outside the deliberate snap 
     prev = a; }
   assert.ok(worst < 25, `jump of ${worst.toFixed(1)}° (${where})`);
 });
+test('walk: the sandals stay flat (foot within 10° of level while planted)', () => {
+  const c = pilot(); let worst = 0;
+  for (const t of frames(.25, 2.6)) { const pose = c.poseAt(t, PLACE), F = c.rig.compute(pose);
+    [['footN', 0], ['footF', .5]].forEach(([ft, off]) => { const f = t / .9 + off, psi = f - Math.floor(f); if (psi >= .5) return;   // stance only
+      const M = F.W[ft], a = Math.abs(Math.atan2(M[1], M[0]) * 180 / Math.PI); worst = Math.max(worst, Math.min(a, 360 - a)); }); }
+  assert.ok(worst < 10, `foot tilted ${worst.toFixed(1)}°`);
+});
 test('the character travels forward while walking and stays put afterwards', () => {
-  const c = pilot(), x = t => c.poseAt(t, PLACE).root.x; assert.ok(x(2.7) - x(0) > 150); assert.ok(Math.abs(x(5) - x(3.5)) < 1);
+  const c = pilot(), x = t => c.poseAt(t, PLACE).root.x; assert.ok(x(2.7) - x(0) > 60); assert.ok(Math.abs(x(5) - x(3.5)) < 1);
 });
 test('poses are the same in any evaluation order', () => {
   const ts = [0, 1.37, 4.2, 9.05, 11.9], a = ts.map(t => JSON.stringify(pilot().poseAt(t, PLACE))), c = pilot(), b = [...ts].reverse().map(t => JSON.stringify(c.poseAt(t, PLACE))).reverse();

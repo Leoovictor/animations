@@ -12,7 +12,10 @@ for b in plan['bones']:
     if 'limits' in b: out['limits'] = b['limits']
     if b.get('scale', 1) != 1: out['scale'] = b['scale']
     bones.append(out)
-sockets = {k: {'bone': bone, 'at': P[pieceOf[bone]]['attach'][i]} for k, (bone, i) in plan['sockets'].items()}
+def sock(v):
+    bone, i = v[0], v[1]; at = P[pieceOf[bone]]['attach'][i]; off = v[2] if len(v) > 2 else [0, 0]
+    return {'bone': bone, 'at': [round(at[0] + off[0], 1), round(at[1] + off[1], 1)]}
+sockets = {k: sock(v) for k, v in plan['sockets'].items()}
 variants = {bone: {k: 'parts/' + v + '.png' for k, v in m.items()} for bone, m in plan.get('variants', {}).items()}
-rig = {'view': plan['view'], 'viewScale': plan.get('viewScale', 1), 'reference': plan.get('reference'), 'bones': bones, 'sockets': sockets, 'variants': variants, 'chains': plan.get('chains', {})}
+rig = {'view': plan['view'], 'viewScale': plan.get('viewScale', 1), 'reference': plan.get('reference'), 'bones': bones, 'sockets': sockets, 'variants': variants, 'chains': plan.get('chains', {}), 'soles': plan.get('soles', {})}
 json.dump(rig, open(os.path.join(D, 'rig.json'), 'w'), indent=1, ensure_ascii=False); print('rig.json:', len(bones), 'bones,', len(sockets), 'sockets')

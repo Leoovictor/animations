@@ -25,7 +25,7 @@ def blobs(mask, min_px):
     return out
 pieces, bad = {}, []
 for sheet, c in cfg.items():
-    if sheet.startswith('_'): continue
+    if sheet.startswith('_') or sheet == 'derive': continue
     img = Image.open(os.path.join(SH, sheet + '.png')).convert('RGB'); img = img.resize((img.width * UP, img.height * UP), Image.LANCZOS)
     a = np.asarray(img).astype(np.float32); rgb, alpha = key(a)
     r, g, b = a[..., 0], a[..., 1], a[..., 2]
@@ -64,7 +64,10 @@ for sheet, c in cfg.items():
                 cy, cx = ndi.center_of_mass(lb == j + 1); rad = np.sqrt((lb == j + 1).sum() / np.pi) * 1.9 + 4
                 yy, xx = np.ogrid[:mk.shape[0], :mk.shape[1]]; mk |= (yy - cy) ** 2 + (xx - cx) ** 2 <= rad * rad
         mk &= ca > .2
-        sil = ndi.binary_fill_holes((ca > .5) | cm | cc)                                      # the piece's own silhouette, markers included
+        # the piece's own silhouette WITHOUT the dots: a dot sticking out past the outline (the cyan one under the sandal sole) must vanish,
+        # while a dot half inside only leaves a small bite, which the closing fills back in
+        base = (ca > .5) & ~(cm | cc); rdot = max(3, int(np.sqrt(max(cm.sum(), cc.sum(), 1) / np.pi)) + 3)
+        sil = ndi.binary_fill_holes(ndi.binary_closing(base, iterations=rdot))
         # smooth fill (normalized convolution) from the piece's own light pixels around the dot: never from the dark outline, so no wedges or stains
         lum = crgb @ np.array([.299, .587, .114]); keep = (~mk) & (ca > .9) & (lum > 70)
         fill = np.zeros_like(crgb); got = np.zeros(mk.shape, bool)
@@ -73,7 +76,7 @@ for sheet, c in cfg.items():
             est = np.dstack([ndi.gaussian_filter(crgb[..., k] * keep, sig) for k in range(3)]) / np.maximum(wsum, 1e-6)[..., None]
             new = mk & ~got & (wsum > .02); fill[new] = est[new]; got |= new
         crgb[mk] = fill[mk]
-        ca = np.where(mk & (cm | cc), 1.0, np.where(mk & ~sil, 0.0, ca))                       # opaque only where a dot was; nothing new outside the outline
+        ca = np.where(mk & sil, np.maximum(ca, (cm | cc).astype(float)), np.where(mk, 0.0, ca))   # dots become piece only inside the outline; outside it, nothing
         tr = c.get('trim', {}).get(name)
         if tr:                                                                                 # cut a joint cap off (pivot unchanged)
             hh, ww = ca.shape
@@ -96,6 +99,13 @@ for sheet, c in cfg.items():
         dr.rectangle([x0 // UP, y0 // UP, x1 // UP, y1 // UP], outline=(255, 0, 0), width=3); dr.text((x0 // UP + 6, y0 // UP + 4), name, fill=(255, 255, 255))
         for q in piv: dr.ellipse([ (x0 + q[0]) / UP - 9, (y0 + q[1]) / UP - 9, (x0 + q[0]) / UP + 9, (y0 + q[1]) / UP + 9], outline=(255, 255, 255), width=3)
     dbg.save(os.path.join(OUT, sheet + '_debug.jpg'), quality=80)
+for dv in cfg.get('derive', []):                                                               # split a piece (e.g. shin → leg + foot at the ankle)
+    src = pieces[dv['from']]; im = Image.open(os.path.join(OUT, dv['from'] + '.png')).convert('RGBA'); a = np.asarray(im).copy(); h, w = a.shape[:2]
+    a[:int(dv['keep'][0] * h), :, 3] = 0; a[int(dv['keep'][1] * h):, :, 3] = 0
+    Image.fromarray(a).save(os.path.join(OUT, dv['name'] + '.png'), optimize=True)
+    F = lambda q: [round(q[0] * w, 1), round(q[1] * h, 1)]
+    pieces[dv['name']] = {'sheet': 'derived:' + dv['from'], 'w': w, 'h': h, 'pivot': src['pivot'] if dv['pivot'] == 'src' else F(dv['pivot']),
+                          'attach': src['attach'] if dv['attach'] == 'src' else [F(q) for q in dv['attach']], 'pivots_found': 1}
 json.dump(pieces, open(os.path.join(OUT, 'pieces.json'), 'w'), indent=1)
 for k, v in pieces.items(): print(f"{k:16s} {v['w']:4d}×{v['h']:<4d} pivot {v['pivot']} attach {v['attach']}" + ('  (!) several pivots' if v['pivots_found'] > 1 else ''))
 if bad: print('\n'.join('ERROR ' + b for b in bad)); sys.exit(1)

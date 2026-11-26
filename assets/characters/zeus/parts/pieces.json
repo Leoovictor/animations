@@ -261,5 +261,69 @@
    ]
   ],
   "pivots_found": 1
+ },
+ "shinU": {
+  "sheet": "derived:shin",
+  "w": 593,
+  "h": 683,
+  "pivot": [
+   215.1,
+   80.9
+  ],
+  "attach": [
+   [
+    189.8,
+    318.3
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "footS": {
+  "sheet": "derived:shin",
+  "w": 593,
+  "h": 683,
+  "pivot": [
+   189.8,
+   318.3
+  ],
+  "attach": [
+   [
+    290.6,
+    566.9
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "shinUF": {
+  "sheet": "derived:shinF",
+  "w": 593,
+  "h": 683,
+  "pivot": [
+   215.1,
+   80.9
+  ],
+  "attach": [
+   [
+    189.8,
+    318.3
+   ]
+  ],
+  "pivots_found": 1
+ },
+ "footSF": {
+  "sheet": "derived:shinF",
+  "w": 593,
+  "h": 683,
+  "pivot": [
+   189.8,
+   318.3
+  ],
+  "attach": [
+   [
+    290.6,
+    566.9
+   ]
+  ],
+  "pivots_found": 1
  }
 }

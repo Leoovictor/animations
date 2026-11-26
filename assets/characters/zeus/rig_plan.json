@@ -1,5 +1,5 @@
 {
- "_about": "Profile rig (v2), every body piece from zeus_exploded. Which piece hangs from which attachment point of its parent (index into the parent's attach list, top→bottom then left→right; 'pivot' = the parent's own pivot). offset: a nudge in parent px. Facing right: N = near side (in front), F = far side (behind, darkened copies). The thighs start at the hip joint under the skirt; the skirt (z 5) covers their tops. Layering: the near arm (z 10) is drawn over the head, because in profile it is closer to the camera than the beard; the far arm hangs further forward so the torso hides most of it.",
+ "_about": "Profile rig (v2), every body piece from zeus_exploded. Which piece hangs from which attachment point of its parent (index into the parent's attach list, top→bottom then left→right; 'pivot' = the parent's own pivot). offset: a nudge in parent px. Facing right: N = near side (in front), F = far side (behind, darkened copies). The thighs start at the hip joint under the skirt; the skirt (z 5) covers their tops. Layering: the near arm (z 10) is drawn over the head, because in profile it is closer to the camera than the beard; the far arm hangs further forward so the torso hides most of it. A socket can carry a third item, an [x,y] nudge in the piece's px (the feet: from the old cap under the sandal up to the bottom of the sole). Legs have an ankle: the leg IK aims at the ankle, and the foot (footN/footF) turns to stay flat; soles: leg → [foot bone, sole socket].",
  "view": "side",
  "viewScale": 0.4,
  "reference": "parts/side_ref.png",
@@ -28,12 +28,27 @@
   {
    "id": "shinF",
    "parent": "thighF",
-   "piece": "shinF",
+   "piece": "shinUF",
    "at": 0,
-   "z": 1,
+   "z": 4,
    "limits": [
     0,
     150
+   ],
+   "offset": [
+    121.2,
+    123.8
+   ]
+  },
+  {
+   "id": "footF",
+   "parent": "shinF",
+   "piece": "footSF",
+   "at": 0,
+   "z": 2,
+   "limits": [
+    -90,
+    90
    ]
   },
   {
@@ -54,12 +69,27 @@
   {
    "id": "shinN",
    "parent": "thighN",
-   "piece": "shin",
+   "piece": "shinU",
    "at": 0,
-   "z": 3,
+   "z": 4,
    "limits": [
     0,
     150
+   ],
+   "offset": [
+    -135.9,
+    146.9
+   ]
+  },
+  {
+   "id": "footN",
+   "parent": "shinN",
+   "piece": "footS",
+   "at": 0,
+   "z": 4,
+   "limits": [
+    -90,
+    90
    ]
   },
   {
@@ -73,8 +103,8 @@
     25
    ],
    "offset": [
-    0,
-    95
+    -41.8,
+    83.6
    ]
   },
   {
@@ -83,8 +113,8 @@
    "piece": "upperArmF",
    "at": 1,
    "offset": [
-    140,
-    10
+    473.4,
+    36.6
    ],
    "z": 0,
    "limits": [
@@ -97,11 +127,16 @@
    "parent": "upperArmF",
    "piece": "forearmF_fist",
    "at": 0,
-   "z": 0,
+   "z": 3,
    "limits": [
     -150,
     0
-   ]
+   ],
+   "offset": [
+    14.5,
+    1.3
+   ],
+   "scale": 0.78
   },
   {
    "id": "head",
@@ -109,10 +144,10 @@
    "piece": "head_smile",
    "at": 0,
    "offset": [
-    0,
-    135
+    -73.7,
+    162.3
    ],
-   "z": 9,
+   "z": 5,
    "limits": [
     -30,
     35
@@ -127,6 +162,10 @@
    "limits": [
     -200,
     240
+   ],
+   "offset": [
+    23.2,
+    -11.7
    ]
   },
   {
@@ -151,10 +190,18 @@
    0
   ],
   "footN": [
-   "shinN",
+   "footN",
    0
   ],
   "footF": [
+   "footF",
+   0
+  ],
+  "ankleN": [
+   "shinN",
+   0
+  ],
+  "ankleF": [
    "shinF",
    0
   ]
@@ -175,11 +222,21 @@
   "legN": [
    "thighN",
    "shinN",
-   "footN"
+   "ankleN"
   ],
   "legF": [
    "thighF",
    "shinF",
+   "ankleF"
+  ]
+ },
+ "soles": {
+  "legN": [
+   "footN",
+   "footN"
+  ],
+  "legF": [
+   "footF",
    "footF"
   ]
  }

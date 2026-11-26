@@ -9,7 +9,7 @@ const hand = (ctx, name) => name && ctx.ch.rig.m.variants?.forearmN?.[name];
 const img = (ctx, o) => { const r = {}; if (face(ctx, o.face)) r.head = face(ctx, o.face); if (hand(ctx, o.hand)) r.forearmN = hand(ctx, o.hand); return r; };
 
 // walk geometry shared by pose() and travel(): stride S per step, cycle period P (two steps), body speed v
-const walkGeo = (c, ctx) => { const S = .32 * ctx.legLen * (c.stride || 1), P = .9 / (c.speed || 1); return { S, P, v: 2 * S / P }; };
+const walkGeo = (c, ctx) => { const S = .18 * ctx.legLen * (c.stride || 1), P = .9 / (c.speed || 1); return { S, P, v: 2 * S / P }; };
 
 export const CLIPS = {
   // breathing and a little weight shift; always the base layer
@@ -18,19 +18,20 @@ export const CLIPS = {
     return { angles: { torso: 1.4 * b, head: -1 * s, upperArmN: 5 + 2.5 * s, forearmN: -10 - 3 * b, upperArmF: -4 - 2 * s, forearmF: -10 }, dy: 1.5 * b };
   } },
 
-  // contact → down → passing → up: each foot is planted on a fixed ground point for its whole stance, then swings in an arc to the next one
+  // a simple walk: short steps, low foot lift, the body almost level, a small arm swing with the elbows held.
+  // Each foot is planted on a fixed ground point for its whole stance, then swings forward low to the next one.
   walk: { priority: 1,
     travel(tau, c, ctx) { return walkGeo(c, ctx).v * tau; },
     pose(u, tau, c, ctx) {
-      const { S, P } = walkGeo(c, ctx), T = Math.min(tau, c.duration), ph = (T / P) % 1, k = c.intensity, h = .16 * ctx.legLen * (c.lift || 1);
+      const { S, P } = walkGeo(c, ctx), T = Math.min(tau, c.duration), ph = (T / P) % 1, k = c.intensity, h = .07 * ctx.legLen * (c.lift || 1);
       const feet = ctx.feet0.map(([x0, y0], i) => {
         const off = i ? .5 : 0, f = T / P + off, n = Math.floor(f), psi = f - n, X = m => ctx.prior + x0 + 2 * S * (m - off + .25);
         if (psi < .5) return [X(n), y0];                                                   // stance: nailed to the ground
-        const s = (psi - .5) / .5; return [lerp(X(n), X(n + 1), EASE.io(s)), y0 - h * Math.sin(Math.PI * s)];   // swing: an arc forward
+        const s = (psi - .5) / .5; return [lerp(X(n), X(n + 1), EASE.io(s)), y0 - h * Math.sin(Math.PI * s)];   // swing: a low arc forward
       });
       const sw = Math.cos(ph * Math.PI * 2);
-      return { feet, dy: .035 * ctx.legLen + .022 * ctx.legLen * Math.cos(ph * Math.PI * 4),   // lowest at each contact, highest at passing
-        angles: { torso: 5 * k, head: -3, upperArmN: 24 * k * sw, forearmN: -22 - 10 * k * Math.max(0, -sw), upperArmF: -24 * k * sw, forearmF: -22 - 10 * k * Math.max(0, sw) } };
+      return { feet, dy: .01 * ctx.legLen * Math.cos(ph * Math.PI * 4),   // the body almost level; the feet stay flat by themselves (ankle)
+        angles: { torso: 2 * k, head: 0, upperArmN: 12 * k * sw, forearmN: -12, upperArmF: -12 * k * sw, forearmF: -12 } };
     } },
 
   // the head tips back to look up, the torso follows a little
