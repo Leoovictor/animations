@@ -77,8 +77,10 @@ docs/
 **Como o rig funciona:**
 - **FK:** a matriz de cada osso é a matriz do pai × `translate(position)` × `rotate(ângulo limitado)` × `translate(-pivot)`. É calculada por frame e sem estado.
 - **IK:** `ik()` do Cisma (2 ossos, analítico) para mão→alvo e pé→chão. O ângulo resultante é limitado pelos `limits`. O pé de apoio fica preso a um ponto do mundo durante o contato (evita o deslizamento).
-- **Espelhamento:** `flip` aplica escala −1 no nível do personagem. Ossos com lado (`L`/`R`) **não** trocam de imagem; trocam só a ordem de desenho (o braço de trás vai atrás do tronco). Assim o espelhamento não muda a identidade.
+- **Espelhamento:** `flip` aplica escala −1 em x no nível do personagem e **não muda a ordem de desenho**: um desenho lateral espelhado continua com o braço de perto na frente, como um desenho virado. As imagens também não trocam, então a identidade não muda. (A primeira versão deste documento dizia que a ordem trocava; isso estava errado e foi corrigido depois do teste `mirroring keeps draw order`.)
 - **Faces:** a cabeça é uma base sem boca e sem sobrancelhas, com camadas trocáveis por cima. A expressão é um canal do animator.
+- **Convenção de ângulos (vista lateral, virado para a direita):** ângulo positivo leva um osso pendurado para trás (−x). O joelho dobra com a canela > 0 e o cotovelo com o antebraço < 0. O visualizador mostrou o erro quando os sinais estavam trocados.
+- **IK com `bend: 0`:** tenta os dois lados do cotovelo ou joelho e fica com o de menor erro dentro dos limites. Um alvo fora dos limites é **reportado** (`error`), nunca resolvido quebrando um limite.
 - **Sockets:** `rig.socket('handR', t)` devolve a posição na tela. O `bolt()` sai daí, em vez das frações a olho atuais.
 - **Juntas sem buracos:** cada peça é gerada com tampa arredondada na junta, sobreposta ao pai. A ordem `z` decide quem cobre quem.
 - **Desempenho:** cada parte é um `drawImage` com transform; sem alocação por frame além das matrizes; imagens decodificadas uma vez.

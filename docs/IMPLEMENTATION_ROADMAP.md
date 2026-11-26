@@ -5,8 +5,22 @@ Status das fases:
 | Fase | Status |
 |---|---|
 | 0 | **concluída** |
-| 1 | aguardando a imagem de referência e aprovação |
-| 2 a 8 | não iniciadas |
+| 1 | aguardando a imagem de referência e a decisão sobre proporções |
+| 2 (engine compartilhada) | **itens 1–3 feitos**; itens 6 e 7 com a parte de código pronta, testada num rig placeholder |
+| 3 a 8 | não iniciadas (dependem das peças do Zeus) |
+
+## Progresso (2026-11-26)
+
+| Item | Estado | Evidência |
+|---|---|---|
+| 1 · `engine/core/{math,timeline,assets}.js` | feito | `node --test engine/tests/engine.test.mjs`: 15/15 |
+| 2 · `engine/camera/camera.js` (cam/apply/screen/bg/flash/shake + `layers()`) | feito; `layers()` ainda sem arte real | teste de shake; `layers()` será verificado com o cenário da floresta |
+| 3 · symlinks `demos/rig-test/{engine,assets}` | feito | o demo carrega os módulos pelo symlink no `still.mjs` |
+| 6 · visualizador `demos/rig-test` | código pronto; aceita `?rig=<rig.json>` | stills de limites, IK e espelhamento com o rig placeholder |
+| 7 · `engine/characters/rig.js` (FK, limites, IK 2 ossos com `bend` automático, sockets, flip) | código pronto | testes de FK, IK (< 1 px nas duas direções), limites, anatomia do joelho, espelhamento e determinismo; MD5 igual do frame 4.6 isolado e fora de ordem |
+| 4, 5, 8–12 | não iniciados | dependem da arte do Zeus ou de aprovação |
+
+**Placeholder:** `engine/tests/fixtures.mjs` é um boneco de cápsulas feito em código, só para testar a matemática. Não é arte de personagem e não entra em vídeo nenhum.
 
 Esforço estimado: P (pequeno, até ~2 h), M (meio dia), G (1–2 dias). As estimativas são para trabalho no ambiente verificado e não incluem rodadas de aprovação visual.
 
