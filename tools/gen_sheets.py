@@ -10,6 +10,7 @@ for s in P.SHEETS:
     if os.path.exists(out): print('exists', out); continue
     cmd = [os.path.join(LIB, '.venv/bin/python'), os.path.join(LIB, 'core/image/gen_image.py'), s['prompt'], '--aspect', s['aspect'], '--out', d, '--name', s['name'], '--timeout', '600']
     if s.get('ref'): cmd += ['--ref', os.path.normpath(os.path.join(d, s['ref']))]
+    if s.get('edit'): cmd += ['--edit']   # the first --ref is the image to edit
     r = subprocess.run(cmd, cwd=LIB)
     got = sorted(glob.glob(os.path.join(d, s['name'] + '_2*.png')))
     if r.returncode or not got: sys.exit(f"generation failed: {s['name']} (exit {r.returncode})")

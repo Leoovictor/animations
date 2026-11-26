@@ -1,48 +1,53 @@
 {
- "_about": "Piece names per sheet in reading order (rows top→bottom, then left→right). scale: size factor so every sheet matches the model sheet's proportions (tuned in the rig viewer). darken: the far limbs, drawn behind the body. piece_scale: per-piece factor measured against the model sheet's side view (head height as the unit), then tuned in the viewer.",
- "zeus_parts_a": {
+ "_about": "Piece names per sheet in reading order (rows top→bottom, then left→right). v2 (profile): every body piece comes from zeus_exploded, an edit of the profile figure zeus_side, so all pieces share one scale and the chibi proportions. The surprised/shout heads come from zeus_parts_a, scaled to the exploded head. copies: the far limbs, darkened. trim: [top, bottom] fractions of a piece's height cut away (joint caps that would show at a joint that barely bends, like the waist); pivots stay where they were measured.",
+ "zeus_side": {
+  "scale": 1.0,
+  "names": [
+   "side_ref"
+  ]
+ },
+ "zeus_exploded": {
   "scale": 1.0,
   "names": [
    "head_smile",
-   "head_surprised",
-   "head_shout",
    "torso",
-   "hips"
+   "hips",
+   "upperArm",
+   "forearm_fist",
+   "thigh",
+   "shin"
   ],
-  "piece_scale": {
-   "torso": 0.6,
-   "hips": 0.74
-  }
- },
- "zeus_parts_b": {
-  "scale": 1.0,
-  "names": [
-   "upperArmN",
-   "forearmN_open",
-   "forearmN_fist",
-   "upperArmF",
-   "forearmF_open",
-   "thighN",
-   "shinN",
-   "thighF",
-   "shinF"
-  ],
+  "copies": {
+   "upperArmF": "upperArm",
+   "forearmF_fist": "forearm_fist",
+   "thighF": "thigh",
+   "shinF": "shin"
+  },
   "darken": [
    "upperArmF",
-   "forearmF_open",
+   "forearmF_fist",
    "thighF",
    "shinF"
   ],
-  "piece_scale": {
-   "upperArmN": 0.71,
-   "upperArmF": 0.71,
-   "forearmN_open": 0.63,
-   "forearmN_fist": 0.63,
-   "forearmF_open": 0.63,
-   "thighN": 0.7,
-   "thighF": 0.7,
-   "shinN": 0.66,
-   "shinF": 0.66
+  "trim": {
+   "torso": [
+    null,
+    0.875
+   ],
+   "hips": [
+    0.135,
+    null
+   ]
   }
+ },
+ "zeus_parts_a": {
+  "scale": 0.975,
+  "names": [
+   "head_smile_a",
+   "head_surprised",
+   "head_shout",
+   "old_torso_3q",
+   "old_hips_3q"
+  ]
  }
 }

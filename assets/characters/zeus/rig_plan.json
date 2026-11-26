@@ -1,7 +1,8 @@
 {
- "_about": "Which piece hangs from which attachment point of its parent (index into the parent's attach list, top→bottom then left→right; 'pivot' = the parent's own pivot). Assembled into rig.json by tools/assemble_rig.py. Facing right: N = near side (drawn in front), F = far side (behind). offset: a small manual nudge (parent px) on top of the measured position, e.g. to tuck the neck under the beard.",
+ "_about": "Profile rig (v2), every body piece from zeus_exploded. Which piece hangs from which attachment point of its parent (index into the parent's attach list, top→bottom then left→right; 'pivot' = the parent's own pivot). offset: a nudge in parent px. Facing right: N = near side (in front), F = far side (behind, darkened copies). The thighs start at the hip joint under the skirt; the skirt (z 5) covers their tops. Layering: the near arm (z 10) is drawn over the head, because in profile it is closer to the camera than the beard; the far arm hangs further forward so the torso hides most of it.",
  "view": "side",
- "viewScale": 0.5,
+ "viewScale": 0.4,
+ "reference": "parts/side_ref.png",
  "bones": [
   {
    "id": "hips",
@@ -14,6 +15,10 @@
    "parent": "hips",
    "piece": "thighF",
    "at": 0,
+   "offset": [
+    -30,
+    -465
+   ],
    "z": 1,
    "limits": [
     -100,
@@ -34,9 +39,13 @@
   {
    "id": "thighN",
    "parent": "hips",
-   "piece": "thighN",
-   "at": 1,
-   "z": 4,
+   "piece": "thigh",
+   "at": 0,
+   "offset": [
+    30,
+    -465
+   ],
+   "z": 3,
    "limits": [
     -100,
     70
@@ -45,9 +54,9 @@
   {
    "id": "shinN",
    "parent": "thighN",
-   "piece": "shinN",
+   "piece": "shin",
    "at": 0,
-   "z": 4,
+   "z": 3,
    "limits": [
     0,
     150
@@ -62,6 +71,10 @@
    "limits": [
     -25,
     25
+   ],
+   "offset": [
+    0,
+    95
    ]
   },
   {
@@ -69,7 +82,11 @@
    "parent": "torso",
    "piece": "upperArmF",
    "at": 1,
-   "z": 2,
+   "offset": [
+    140,
+    10
+   ],
+   "z": 0,
    "limits": [
     -200,
     240
@@ -78,9 +95,9 @@
   {
    "id": "forearmF",
    "parent": "upperArmF",
-   "piece": "forearmF_open",
+   "piece": "forearmF_fist",
    "at": 0,
-   "z": 2,
+   "z": 0,
    "limits": [
     -150,
     0
@@ -91,22 +108,22 @@
    "parent": "torso",
    "piece": "head_smile",
    "at": 0,
+   "offset": [
+    0,
+    70
+   ],
    "z": 9,
    "limits": [
     -30,
     35
-   ],
-   "offset": [
-    0,
-    16
    ]
   },
   {
    "id": "upperArmN",
    "parent": "torso",
-   "piece": "upperArmN",
-   "at": 2,
-   "z": 8,
+   "piece": "upperArm",
+   "at": 1,
+   "z": 10,
    "limits": [
     -200,
     240
@@ -115,9 +132,9 @@
   {
    "id": "forearmN",
    "parent": "upperArmN",
-   "piece": "forearmN_open",
+   "piece": "forearm_fist",
    "at": 0,
-   "z": 8,
+   "z": 10,
    "limits": [
     -150,
     0
@@ -147,10 +164,6 @@
    "smile": "head_smile",
    "surprised": "head_surprised",
    "shout": "head_shout"
-  },
-  "forearmN": {
-   "open": "forearmN_open",
-   "fist": "forearmN_fist"
   }
  },
  "chains": {

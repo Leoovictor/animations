@@ -4,7 +4,7 @@ import { Character } from './engine/characters/animator.js';
 import { loadJSON, loadImages } from './engine/core/assets.js';
 import { act, PILOT_CLIPS } from './acting.js';
 const W = 1080, H = 1920, Q = new URLSearchParams(location.search), g = document.getElementById('c').getContext('2d');
-const PLACE = { x: 120, y: 1480, scale: .5 };
+const PLACE = { x: -40, y: 1480, scale: .4 };
 let Z;
 function render(t) {
   g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = '#20232f'; g.fillRect(0, 0, W, H);

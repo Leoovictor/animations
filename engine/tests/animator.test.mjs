@@ -2,7 +2,7 @@
 import test from 'node:test'; import assert from 'node:assert/strict'; import fs from 'node:fs';
 import { Rig } from '../characters/rig.js'; import { Character } from '../characters/animator.js'; import { CLIPS } from '../characters/clips.js'; import { act } from '../../demos/clips/acting.js';
 const RIGJ = JSON.parse(fs.readFileSync(new URL('../../assets/characters/zeus/rig.json', import.meta.url)));
-const PLACE = { x: 200, y: 1500, scale: .5 }, FPS = 30;
+const PLACE = { x: 200, y: 1500, scale: .4 }, FPS = 30;
 export function pilot() { return act(new Character(new Rig(RIGJ), {})); }   // the pilot's acting: demos/clips/acting.js
 const frames = (a, b) => { const r = []; for (let f = Math.round(a * FPS); f <= Math.round(b * FPS); f++) r.push(f / FPS); return r; };
 

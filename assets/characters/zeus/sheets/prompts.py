@@ -13,6 +13,8 @@ KEY = ("Pure flat chroma-green background (#00B140), every figure or piece separ
 MARK = ("On every piece draw small solid round markers, about the size of a fingertip, in exact flat colours: one pure MAGENTA (#FF00FF) dot exactly at the "
  "joint where that piece rotates, and pure CYAN (#00FFFF) dots exactly where the next pieces attach. Each piece ends at its joints in a rounded cap that "
  "overlaps the neighbouring piece, so no gap shows when the joint bends. ")
+PROFILE = ("Everything in strict side view (profile), facing right, exactly like the reference profile figure: the chest faces right, the back faces left, "
+ "only one eye visible, the near shoulder seen from the side in the middle of the top of the torso, the far shoulder hidden behind it. Never a front or three-quarter view. ")
 SHEETS = [
  dict(name="zeus_model", aspect="16:9", ref="zeus_model_v1_too_tall.png", prompt=STYLE + ZEUS + "Same character as the reference but redrawn much more compact and cute, with a huge head and a short body. " +
   "Character model sheet, same character five times in a row: 1) full body side view facing right, standing relaxed; 2) full body three-quarter view facing right; "
@@ -31,4 +33,27 @@ SHEETS = [
   "5) far forearm with open hand, slightly darker (MAGENTA at the elbow; CYAN at the palm centre); 6) near thigh (MAGENTA at the hip; CYAN at the knee); "
   "7) near shin with sandal and foot pointing right (MAGENTA at the knee; CYAN at the sole under the ankle); 8) far thigh, slightly darker (MAGENTA at the hip; CYAN at the knee); "
   "9) far shin with sandal, slightly darker (MAGENTA at the knee; CYAN at the sole under the ankle). " + MARK + KEY),
+ dict(name="zeus_side", aspect="16:9", ref="zeus_model.png", prompt=STYLE + ZEUS + PROFILE +
+  "One single full-body figure of the same character as the reference model sheet (same chibi proportions, same face, hair, beard, laurel, tunic, belt, cuffs, sandals), "
+  "in a neutral standing pose in strict side view facing right: both arms hanging straight down beside the body, the near arm in front of the torso, "
+  "legs straight with feet slightly apart front-to-back, both sandals flat on the ground pointing right. Large, centred, with empty space around. " + KEY),
+ dict(name="zeus_parts_c", aspect="16:9", ref="zeus_side.png", prompt=STYLE + ZEUS + PROFILE + "Cut-out puppet part sheet for animation, cut from the attached side-view figure, "
+  "same scale, same colours, same drawing. Separate pieces: 1) torso in side view with the tunic and the gold belt seen from the side, no arms, no head, no legs: MAGENTA at the middle of the waist; "
+  "CYAN at the base of the neck and CYAN at the shoulder joint (one shoulder only, in the middle of the top of the torso); "
+  "2) hips with the short tunic skirt in side view: MAGENTA at the middle of the waist; CYAN at the hip joint, near the centre of the bottom of the skirt. " + MARK + KEY),
+ dict(name="zeus_parts_d", aspect="16:9", ref="zeus_side.png", prompt=STYLE + ZEUS + PROFILE + "Cut-out puppet part sheet for animation, cut from the attached side-view figure, "
+  "same scale, same colours, same drawing. Every limb piece is drawn perfectly straight and vertical, hanging down, in side view facing right: "
+  "1) upper arm (shoulder to elbow), with the gold cuff at the bottom: MAGENTA at the shoulder at the top, CYAN at the elbow at the bottom; "
+  "2) forearm with an open hand hanging down, palm toward the body, fingers relaxed: MAGENTA at the elbow at the top, CYAN at the palm centre; "
+  "3) the same forearm with a closed fist: MAGENTA at the elbow, CYAN at the fist centre; "
+  "4) thigh (hip to knee), straight down: MAGENTA at the hip at the top, CYAN at the knee at the bottom; "
+  "5) shin with the sandal and foot, straight down, the foot pointing right and flat: MAGENTA at the knee at the top, CYAN on the ground line under the ankle. " + MARK + KEY),
+ dict(name="zeus_exploded", aspect="16:9", ref="zeus_side.png", edit=True, prompt="Edit this image. Take this exact character drawing and redraw it as an exploded "
+  "cut-out puppet: the same drawing split into separate pieces laid out apart from each other on the same flat green background, every piece EXACTLY the same size, "
+  "thickness, shape, colours and line style as in the original figure (do not make any limb thinner or longer, keep the short stubby chibi proportions and the big fist). "
+  "Pieces, in two rows with wide gaps: top row: 1) the head with hair, beard, laurel and a short neck stump; 2) the torso with the tunic and belt, without the arm, "
+  "completing the parts that the arm was hiding; 3) the skirt (hips). Bottom row: 4) the upper arm from shoulder to just above the gold cuff; 5) the forearm with the gold cuff "
+  "and the big fist; 6) the thigh (the part hidden under the skirt, completed); 7) the shin with the sandal and foot. " + MARK + " Magenta and cyan dots: head MAGENTA at the bottom of the neck; "
+  "torso MAGENTA at the waist, CYAN at the base of the neck and CYAN at the shoulder; skirt MAGENTA at the waist, CYAN at the hip joint; upper arm MAGENTA at the shoulder, CYAN at the elbow; "
+  "forearm MAGENTA at the elbow, CYAN at the fist centre; thigh MAGENTA at the hip, CYAN at the knee; shin MAGENTA at the knee, CYAN on the ground under the ankle. No text, no labels."),
 ]

@@ -1,14 +1,15 @@
 {
  "view": "side",
- "viewScale": 0.5,
+ "viewScale": 0.4,
+ "reference": "parts/side_ref.png",
  "bones": [
   {
    "id": "hips",
    "parent": null,
    "image": "parts/hips.png",
    "pivot": [
-    288.8,
-    69.3
+    410.9,
+    81.0
    ],
    "z": 5,
    "position": [
@@ -21,13 +22,13 @@
    "parent": "hips",
    "image": "parts/thighF.png",
    "pivot": [
-    107.6,
-    45.6
+    220.3,
+    82.4
    ],
    "z": 1,
    "position": [
-    -177.8,
-    38.5
+    -105.6,
+    79.2
    ],
    "limits": [
     -100,
@@ -39,13 +40,13 @@
    "parent": "thighF",
    "image": "parts/shinF.png",
    "pivot": [
-    106.8,
-    42.9
+    215.1,
+    80.9
    ],
    "z": 1,
    "position": [
-    104.0,
-    307.4
+    -28.8,
+    464.9
    ],
    "limits": [
     0,
@@ -55,15 +56,15 @@
   {
    "id": "thighN",
    "parent": "hips",
-   "image": "parts/thighN.png",
+   "image": "parts/thigh.png",
    "pivot": [
-    104.6,
-    45.3
+    220.3,
+    82.4
    ],
-   "z": 4,
+   "z": 3,
    "position": [
-    174.1,
-    38.0
+    -45.6,
+    79.2
    ],
    "limits": [
     -100,
@@ -73,15 +74,15 @@
   {
    "id": "shinN",
    "parent": "thighN",
-   "image": "parts/shinN.png",
+   "image": "parts/shin.png",
    "pivot": [
-    106.2,
-    43.0
+    215.1,
+    80.9
    ],
-   "z": 4,
+   "z": 3,
    "position": [
-    93.9,
-    305.5
+    -28.8,
+    464.9
    ],
    "limits": [
     0,
@@ -93,13 +94,13 @@
    "parent": "hips",
    "image": "parts/torso.png",
    "pivot": [
-    265.3,
-    436.0
+    409.5,
+    801.5
    ],
    "z": 6,
    "position": [
     0.0,
-    0.0
+    95.0
    ],
    "limits": [
     -25,
@@ -111,13 +112,13 @@
    "parent": "torso",
    "image": "parts/upperArmF.png",
    "pivot": [
-    115.9,
-    46.0
+    310.0,
+    82.9
    ],
-   "z": 2,
+   "z": 0,
    "position": [
-    -210.6,
-    -280.8
+    -169.5,
+    -517.0
    ],
    "limits": [
     -200,
@@ -127,15 +128,15 @@
   {
    "id": "forearmF",
    "parent": "upperArmF",
-   "image": "parts/forearmF_open.png",
+   "image": "parts/forearmF_fist.png",
    "pivot": [
-    87.1,
-    40.8
+    208.8,
+    81.5
    ],
-   "z": 2,
+   "z": 0,
    "position": [
-    43.4,
-    309.7
+    -121.9,
+    509.7
    ],
    "limits": [
     -150,
@@ -147,13 +148,13 @@
    "parent": "torso",
    "image": "parts/head_smile.png",
    "pivot": [
-    498.4,
-    899.6
+    419.7,
+    856.1
    ],
    "z": 9,
    "position": [
-    -10.1,
-    -378.0
+    -28.1,
+    -647.0
    ],
    "limits": [
     -30,
@@ -163,15 +164,15 @@
   {
    "id": "upperArmN",
    "parent": "torso",
-   "image": "parts/upperArmN.png",
+   "image": "parts/upperArm.png",
    "pivot": [
-    123.8,
-    45.8
+    310.0,
+    82.9
    ],
-   "z": 8,
+   "z": 10,
    "position": [
-    184.8,
-    -280.8
+    -309.5,
+    -527.0
    ],
    "limits": [
     -200,
@@ -181,15 +182,15 @@
   {
    "id": "forearmN",
    "parent": "upperArmN",
-   "image": "parts/forearmN_open.png",
+   "image": "parts/forearm_fist.png",
    "pivot": [
-    86.3,
-    40.7
+    208.8,
+    81.5
    ],
-   "z": 8,
+   "z": 10,
    "position": [
-    28.0,
-    300.2
+    -121.9,
+    509.7
    ],
    "limits": [
     -150,
@@ -201,29 +202,29 @@
   "handN": {
    "bone": "forearmN",
    "at": [
-    242.6,
-    215.1
+    258.0,
+    459.0
    ]
   },
   "handF": {
    "bone": "forearmF",
    "at": [
-    247.4,
-    219.2
+    258.0,
+    459.0
    ]
   },
   "footN": {
    "bone": "shinN",
    "at": [
-    128.6,
-    332.9
+    291.9,
+    607.7
    ]
   },
   "footF": {
    "bone": "shinF",
    "at": [
-    128.5,
-    332.8
+    291.9,
+    607.7
    ]
   }
  },
@@ -232,10 +233,6 @@
    "smile": "parts/head_smile.png",
    "surprised": "parts/head_surprised.png",
    "shout": "parts/head_shout.png"
-  },
-  "forearmN": {
-   "open": "parts/forearmN_open.png",
-   "fist": "parts/forearmN_fist.png"
   }
  },
  "chains": {

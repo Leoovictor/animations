@@ -13,5 +13,5 @@ for b in plan['bones']:
     bones.append(out)
 sockets = {k: {'bone': bone, 'at': P[pieceOf[bone]]['attach'][i]} for k, (bone, i) in plan['sockets'].items()}
 variants = {bone: {k: 'parts/' + v + '.png' for k, v in m.items()} for bone, m in plan.get('variants', {}).items()}
-rig = {'view': plan['view'], 'viewScale': plan.get('viewScale', 1), 'bones': bones, 'sockets': sockets, 'variants': variants, 'chains': plan.get('chains', {})}
+rig = {'view': plan['view'], 'viewScale': plan.get('viewScale', 1), 'reference': plan.get('reference'), 'bones': bones, 'sockets': sockets, 'variants': variants, 'chains': plan.get('chains', {})}
 json.dump(rig, open(os.path.join(D, 'rig.json'), 'w'), indent=1, ensure_ascii=False); print('rig.json:', len(bones), 'bones,', len(sockets), 'sockets')

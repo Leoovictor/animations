@@ -8,7 +8,7 @@ Status das fases:
 | 1 | guia v1 escrito (`docs/MYTHOLOGY_CHIBI_STYLE.md`), proporções chibi aprovadas; **imagem de referência do jogo ainda pendente** |
 | 2 (engine compartilhada) | **itens 1–3 feitos**; itens 6 e 7 com a parte de código pronta, testada num rig placeholder |
 | 3 (assets e rig do Zeus) | **aprovada** (1ª aprovação visual, `assets/characters/zeus/preview.jpg`) |
-| 4 (movimentos do piloto) | **feita; aguardando a 2ª aprovação visual** (`demos/clips`, `out/galeria.mp4`) |
+| 4 (movimentos do piloto) | **refeita com o rig v2 (perfil); aguardando a 2ª aprovação visual** (`demos/clips`, `out/galeria.mp4`) |
 | 5 a 8 | não iniciadas |
 
 ## Progresso (2026-11-26)
@@ -87,3 +87,29 @@ Esforço estimado: P (pequeno, até ~2 h), M (meio dia), G (1–2 dias). As esti
 3. **Vista do piloto:** começar só pela **vista lateral** (recomendado: é o que a caminhada e o ataque precisam).
 4. **Gerações de imagem:** autorizar várias gerações no Codex para as folhas de peças e as camadas do cenário (estimativa de 6–10 gerações).
 5. **Symlink no repositório:** aceitar (funciona no macOS e no Linux; no Windows exige `core.symlinks`).
+
+
+## Revisão após a 2ª aprovação visual (2026-11-26): rig v2 em perfil
+
+**Problema apontado:** as partes não casavam. A cabeça estava de perfil, mas o tronco e o quadril em três quartos, quase de frente, e os braços e pernas pendiam das bordas de um peito frontal.
+
+**Causa:** cada folha de peças foi gerada separadamente, e o gerador não manteve nem a vista nem a proporção. Uma segunda tentativa, com folhas "cortadas da figura de perfil", ainda saiu com membros finos e longos.
+
+**Solução que funcionou:**
+1. `zeus_side.png`: um Zeus chibi em perfil puro, usado como referência.
+2. `zeus_exploded.png`: uma **edição** dessa mesma figura, explodida em peças (`--edit` no `gen_image.py`). Assim todas as peças saem na mesma escala, com as proporções chibi e com tampas arredondadas nas juntas.
+3. As expressões de surpresa e grito vêm da folha antiga, escaladas para a nova cabeça.
+4. O visualizador ganhou `?ref=1`: desenha a referência, a sobreposição e o rig lado a lado. Foi assim que conferi o encaixe e ajustei o quadril (a junta fica alta, sob a saia), a cintura e o pescoço.
+
+**Mudanças no extrator:**
+- **Apagar os marcadores por preenchimento suave:** convolução normalizada a partir dos pixels claros da própria peça. O método anterior, por vizinho mais próximo, deixava cunhas escuras.
+- **`trim`:** corta as tampas da cintura, que quase não dobra.
+- **`copies`:** cria os membros de trás escurecidos.
+
+**Camadas:**
+- O braço da frente (z 10) é desenhado sobre a cabeça, porque de perfil ele está mais perto da câmera que a barba. Antes, o golpe sumia atrás dela.
+- O braço de trás pende mais à frente, escondido pelo tronco.
+
+**Limitações:**
+- A mão é sempre o punho, porque a edição só gerou o punho.
+- Ainda há um leve borrão onde estavam alguns marcadores (base do pescoço, tampa do cotovelo).

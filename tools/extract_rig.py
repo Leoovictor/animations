@@ -48,7 +48,8 @@ for sheet, c in cfg.items():
         own = ndi.binary_dilation(lab[y0:y1, x0:x1] == lid, iterations=2)
         cm, cc = mag[y0:y1, x0:x1] & own, cya[y0:y1, x0:x1] & own
         piv, att = blobs(cm, 30), blobs(cc, 30)
-        if not piv: bad.append(f'{sheet}/{name}: no magenta pivot'); continue
+        if not piv and c.get('markers', True) and name != 'side_ref': bad.append(f'{sheet}/{name}: no magenta pivot'); continue
+        if not piv: piv = [[(xs.stop - xs.start) / 2 + pad, ys.stop - ys.start + pad]]   # unmarked reference figure: bottom centre
         crgb = rgb[y0:y1, x0:x1].copy(); ca = alpha[y0:y1, x0:x1] * own
         # erase markers and the dark ring the generator draws around them: a disc ~1.9× the dot's radius, filled from the nearest piece pixel outside it
         mk = np.zeros_like(cm)
@@ -60,17 +61,28 @@ for sheet, c in cfg.items():
                 yy, xx = np.ogrid[:mk.shape[0], :mk.shape[1]]; mk |= (yy - cy) ** 2 + (xx - cx) ** 2 <= rad * rad
         mk &= ca > .2
         sil = ndi.binary_fill_holes((ca > .5) | cm | cc)                                      # the piece's own silhouette, markers included
-        keep = (~mk) & (ca > .9) & ndi.binary_erosion(sil, iterations=10)                      # fill only from the interior, never from the dark outline
-        if not keep.any(): keep = (~mk) & (ca > .9)
-        _, (iy, ix) = ndi.distance_transform_edt(~keep, return_indices=True)
-        crgb[mk] = crgb[iy[mk], ix[mk]]
+        # smooth fill (normalized convolution) from the piece's own light pixels around the dot: never from the dark outline, so no wedges or stains
+        lum = crgb @ np.array([.299, .587, .114]); keep = (~mk) & (ca > .9) & (lum > 70)
+        fill = np.zeros_like(crgb); got = np.zeros(mk.shape, bool)
+        for sig in (4, 8, 16, 32, 64):
+            wsum = ndi.gaussian_filter(keep.astype(np.float32), sig)
+            est = np.dstack([ndi.gaussian_filter(crgb[..., k] * keep, sig) for k in range(3)]) / np.maximum(wsum, 1e-6)[..., None]
+            new = mk & ~got & (wsum > .02); fill[new] = est[new]; got |= new
+        crgb[mk] = fill[mk]
         ca = np.where(mk & (cm | cc), 1.0, np.where(mk & ~sil, 0.0, ca))                       # opaque only where a dot was; nothing new outside the outline
-        if name in c.get('darken', []): crgb *= .82
-        im = Image.fromarray(np.dstack([crgb, ca * 255]).clip(0, 255).astype(np.uint8))
-        if sc != 1.0: im = im.resize((round(im.width * sc), round(im.height * sc)), Image.LANCZOS)
-        im.save(os.path.join(OUT, name + '.png'), optimize=True)
+        tr = c.get('trim', {}).get(name)
+        if tr:                                                                                 # cut a joint cap off (pivot unchanged)
+            hh = ca.shape[0]
+            if tr[0] is not None: ca[:int(tr[0] * hh)] = 0
+            if tr[1] is not None: ca[int(tr[1] * hh):] = 0
+        outs = [name] + [k for k, v in c.get('copies', {}).items() if v == name]          # a piece and its copies (the far limbs)
+        for nm in outs:
+            rgb_ = crgb * (.8 if nm in c.get('darken', []) else 1)
+            im = Image.fromarray(np.dstack([rgb_, ca * 255]).clip(0, 255).astype(np.uint8))
+            if sc != 1.0: im = im.resize((round(im.width * sc), round(im.height * sc)), Image.LANCZOS)
+            im.save(os.path.join(OUT, nm + '.png'), optimize=True)
         P = lambda p: [round(p[0] * sc, 1), round(p[1] * sc, 1)]
-        pieces[name] = { 'sheet': sheet, 'w': im.width, 'h': im.height, 'pivot': P(piv[0]), 'attach': sorted([P(q) for q in att], key=lambda q: (round(q[1] / 40), q[0])), 'pivots_found': len(piv) }
+        for nm in outs: pieces[nm] = { 'sheet': sheet, 'w': im.width, 'h': im.height, 'pivot': P(piv[0]), 'attach': sorted([P(q) for q in att], key=lambda q: (round(q[1] / 40), q[0])), 'pivots_found': len(piv) }
         dr.rectangle([x0 // UP, y0 // UP, x1 // UP, y1 // UP], outline=(255, 0, 0), width=3); dr.text((x0 // UP + 6, y0 // UP + 4), name, fill=(255, 255, 255))
         for q in piv: dr.ellipse([ (x0 + q[0]) / UP - 9, (y0 + q[1]) / UP - 9, (x0 + q[0]) / UP + 9, (y0 + q[1]) / UP + 9], outline=(255, 255, 255), width=3)
     dbg.save(os.path.join(OUT, sheet + '_debug.jpg'), quality=80)
