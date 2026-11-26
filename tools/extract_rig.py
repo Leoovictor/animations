@@ -72,7 +72,10 @@ for sheet, c in cfg.items():
         ca = np.where(mk & (cm | cc), 1.0, np.where(mk & ~sil, 0.0, ca))                       # opaque only where a dot was; nothing new outside the outline
         tr = c.get('trim', {}).get(name)
         if tr:                                                                                 # cut a joint cap off (pivot unchanged)
-            hh = ca.shape[0]
+            hh, ww = ca.shape
+            if isinstance(tr, dict):
+                if 'rect' in tr: x0r, y0r, x1r, y1r = tr['rect']; ca[int(y0r * hh):int(y1r * hh), int(x0r * ww):int(x1r * ww)] = 0
+                tr = [tr.get('top'), tr.get('bottom')]
             if tr[0] is not None: ca[:int(tr[0] * hh)] = 0
             if tr[1] is not None: ca[int(tr[1] * hh):] = 0
         outs = [name] + [k for k, v in c.get('copies', {}).items() if v == name]          # a piece and its copies (the far limbs)

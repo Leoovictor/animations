@@ -1,5 +1,5 @@
 {
- "_about": "Piece names per sheet in reading order (rows top→bottom, then left→right). v2 (profile): every body piece comes from zeus_exploded, an edit of the profile figure zeus_side, so all pieces share one scale and the chibi proportions. The surprised/shout heads come from zeus_parts_a, scaled to the exploded head. copies: the far limbs, darkened. trim: [top, bottom] fractions of a piece's height cut away (joint caps that would show at a joint that barely bends, like the waist); pivots stay where they were measured.",
+ "_about": "Piece names per sheet in reading order (rows top→bottom, then left→right). v2 (profile): every body piece comes from zeus_exploded, an edit of the profile figure zeus_side, so all pieces share one scale and the chibi proportions. The surprised/shout heads come from zeus_parts_a, scaled to the exploded head. copies: the far limbs, darkened. trim: [top, bottom] fractions of a piece's height cut away (joint caps that would show at a joint that barely bends, like the waist); pivots stay where they were measured. A trim can also be {\"rect\":[x0,y0,x1,y1]} (fractions) to cut only a region, e.g. the torso's neck stump without flattening the shoulders.",
  "zeus_side": {
   "scale": 1.0,
   "names": [
@@ -30,14 +30,27 @@
    "shinF"
   ],
   "trim": {
-   "torso": [
-    null,
-    0.875
-   ],
+   "torso": {
+    "rect": [
+     0.36,
+     0,
+     0.7,
+     0.158
+    ],
+    "bottom": 0.875
+   },
    "hips": [
     0.135,
     null
-   ]
+   ],
+   "head_smile": {
+    "rect": [
+     0.25,
+     0.855,
+     0.63,
+     1.0
+    ]
+   }
   }
  },
  "zeus_parts_a": {
@@ -48,6 +61,24 @@
    "head_shout",
    "old_torso_3q",
    "old_hips_3q"
-  ]
+  ],
+  "trim": {
+   "head_surprised": {
+    "rect": [
+     0.44,
+     0.885,
+     0.72,
+     1.0
+    ]
+   },
+   "head_shout": {
+    "rect": [
+     0.44,
+     0.885,
+     0.72,
+     1.0
+    ]
+   }
+  }
  }
 }
