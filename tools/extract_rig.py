@@ -82,10 +82,13 @@ for sheet, c in cfg.items():
         for nm in outs:
             rgb_ = crgb * (.8 if nm in c.get('darken', []) else 1)
             im = Image.fromarray(np.dstack([rgb_, ca * 255]).clip(0, 255).astype(np.uint8))
+            if nm in c.get('mirror', []): im = im.transpose(Image.FLIP_LEFT_RIGHT)
             if sc != 1.0: im = im.resize((round(im.width * sc), round(im.height * sc)), Image.LANCZOS)
             im.save(os.path.join(OUT, nm + '.png'), optimize=True)
         P = lambda p: [round(p[0] * sc, 1), round(p[1] * sc, 1)]
-        for nm in outs: pieces[nm] = { 'sheet': sheet, 'w': im.width, 'h': im.height, 'pivot': P(piv[0]), 'attach': sorted([P(q) for q in att], key=lambda q: (round(q[1] / 40), q[0])), 'pivots_found': len(piv) }
+        for nm in outs:
+            mx = (lambda q: [round(im.width - q[0], 1), q[1]]) if nm in c.get('mirror', []) else (lambda q: q)   # mirrored copy: mirror the measured points too
+            pieces[nm] = { 'sheet': sheet, 'w': im.width, 'h': im.height, 'pivot': mx(P(piv[0])), 'attach': sorted([mx(P(q)) for q in att], key=lambda q: (round(q[1] / 40), q[0])), 'pivots_found': len(piv) }
         dr.rectangle([x0 // UP, y0 // UP, x1 // UP, y1 // UP], outline=(255, 0, 0), width=3); dr.text((x0 // UP + 6, y0 // UP + 4), name, fill=(255, 255, 255))
         for q in piv: dr.ellipse([ (x0 + q[0]) / UP - 9, (y0 + q[1]) / UP - 9, (x0 + q[0]) / UP + 9, (y0 + q[1]) / UP + 9], outline=(255, 255, 255), width=3)
     dbg.save(os.path.join(OUT, sheet + '_debug.jpg'), quality=80)

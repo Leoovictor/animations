@@ -130,7 +130,7 @@
    "parent": "upperArmF",
    "image": "parts/forearmF_fist.png",
    "pivot": [
-    208.8,
+    287.2,
     81.5
    ],
    "z": 0,
@@ -209,7 +209,7 @@
   "handF": {
    "bone": "forearmF",
    "at": [
-    258.0,
+    238.0,
     459.0
    ]
   },
