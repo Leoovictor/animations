@@ -7,8 +7,9 @@ Status das fases:
 | 0 | **concluída** |
 | 1 | guia v1 escrito (`docs/MYTHOLOGY_CHIBI_STYLE.md`), proporções chibi aprovadas; **imagem de referência do jogo ainda pendente** |
 | 2 (engine compartilhada) | **itens 1–3 feitos**; itens 6 e 7 com a parte de código pronta, testada num rig placeholder |
-| 3 (assets e rig do Zeus) | **peças geradas, extraídas e montadas; aguardando a 1ª aprovação visual** (`assets/characters/zeus/preview.jpg`) |
-| 4 a 8 | não iniciadas |
+| 3 (assets e rig do Zeus) | **aprovada** (1ª aprovação visual, `assets/characters/zeus/preview.jpg`) |
+| 4 (movimentos do piloto) | **feita; aguardando a 2ª aprovação visual** (`demos/clips`, `out/galeria.mp4`) |
+| 5 a 8 | não iniciadas |
 
 ## Progresso (2026-11-26)
 
@@ -22,7 +23,16 @@ Status das fases:
 | 4 · folhas do Zeus chibi (`assets/characters/zeus/sheets/`) | feito: 1 model sheet (2 gerações; a 1ª saiu com ~5 cabeças de altura e foi refeita) + 2 folhas de peças com marcadores | `zeus_model.png`, `zeus_parts_a.png`, `zeus_parts_b.png` |
 | 5 · `tools/extract_rig.py` | feito: recorta, mede pivôs (magenta) e encaixes (ciano), apaga os marcadores e o anel escuro em volta preenchendo só a partir do interior da peça, e aplica escala por peça | 14 peças, 14 pivôs; sem resíduo visível na inspeção em tamanho real |
 | 5b · `tools/assemble_rig.py` + `rig_plan.json` | feito: posições vêm dos marcadores; `offset` manual só no pescoço (+16 px) | `assets/characters/zeus/rig.json` (11 ossos, 4 sockets, variantes de rosto e de mão) |
-| 8–12 | não iniciados | dependem da aprovação do Zeus |
+| 8 · `engine/characters/animator.js` + `clips.js` | feito: camadas por prioridade com blend de entrada e saída pelo caminho mais curto do ângulo; pernas por IK com o lado do joelho escolhido uma vez; joelhos sempre um pouco dobrados; alvo fora de alcance levanta o pé em vez de arrastar; follow-through da cabeça; sombra de contato. Clips: idle, walk, lookUp, surprised, anticipation, castLightning, recoil | `engine/tests/animator.test.mjs` 8/8 (pé de apoio < 2 px entre frames; pés no alvo < 2 px no piloto inteiro; joelho na frente; nenhum salto > 25° por frame fora do golpe; deslocamento só na caminhada; ordem de avaliação indiferente; mão acima do pescoço no golpe) |
+| 8b · `demos/clips` | feito: galeria com a atuação dos 12 s do piloto (`acting.js`, a mesma usada nos testes) | `demos/clips/out/galeria.mp4` (1080×1920, 30 fps, 12,0 s, 360 frames) |
+| 9–12 | não iniciados | efeitos, luz, cenário em camadas e o piloto final |
+
+**Limitações dos movimentos v1:**
+- Sem piscada: os rostos são imagens inteiras, sem camada de olhos.
+- Sem boca falando: não há visemas.
+- O braço de trás é animado só em FK.
+- A caminhada tem um único ritmo (0,9 s por ciclo).
+- Os clips run, talk, fear, point, weaponAttack, hitReaction, fall, land e heroPose ficam para depois do piloto.
 
 **Limitações conhecidas do Zeus v1:**
 - Tronco e quadril saíram mais em três quartos do que de perfil, então o corpo fica em três quartos e a cabeça de perfil.
