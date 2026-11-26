@@ -21,5 +21,9 @@ class H(http.server.SimpleHTTPRequestHandler):
         r = subprocess.run([sys.executable, os.path.join(ROOT, 'tools', 'assemble_rig.py'), d], capture_output=True, text=True)
         self.reply(200 if r.returncode == 0 else 500, {'ok': r.returncode == 0, 'log': (r.stdout + r.stderr).strip()})
     def reply(self, code, obj): b = json.dumps(obj).encode(); self.send_response(code); self.send_header('Content-Type', 'application/json'); self.send_header('Content-Length', str(len(b))); self.end_headers(); self.wfile.write(b)
-print(f'rig editor: http://localhost:{PORT}/demos/rig-editor/?char=zeus', flush=True)
-http.server.ThreadingHTTPServer(('127.0.0.1', PORT), H).serve_forever()
+URL = f'http://localhost:{PORT}/demos/rig-editor/?char=zeus'
+try: srv = http.server.ThreadingHTTPServer(('127.0.0.1', PORT), H)
+except OSError as e:
+    if e.errno in (48, 98): sys.exit(f'A porta {PORT} já está em uso: o editor provavelmente já está rodando. Abra {URL}\n(ou use outra porta: python3 tools/rig_editor_server.py 8766)')
+    raise
+print('rig editor:', URL, flush=True); srv.serve_forever()
