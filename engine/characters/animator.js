@@ -80,7 +80,7 @@ export class Character {
   draw(g, t, place = {}) {
     const pose = this.poseAt(t, place);
     if (place.shadow !== false) {   // contact shadows: darker and tighter when the foot is on the ground
-      g.save(); g.setTransform(1, 0, 0, 1, 0, 0);
+      g.save();   // in the caller's (camera) frame, like the character
       for (const f of pose.feet) { const lift = clamp(((place.y ?? 0) - f[1]) / (60 * (place.scale ?? 1))), r = 70 * (place.scale ?? 1) * (1 - .3 * lift);
         g.fillStyle = `rgba(0,0,0,${.28 * (1 - .7 * lift)})`; g.beginPath(); g.ellipse(f[0], place.y ?? 0, r, r * .22, 0, 0, Math.PI * 2); g.fill(); }
       g.restore();

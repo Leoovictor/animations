@@ -128,3 +128,17 @@ O usuário aprovou o Zeus e os movimentos ("está perfeito agora").
 - editor de encaixe (`demos/rig-editor`), com os ajustes finos feitos pelo usuário.
 
 **Próximo:** itens 9–12 (cenário da floresta em camadas, raio a partir do socket da mão, luz local, partículas e vento, câmera, áudio e o piloto de 12 s).
+
+
+## Fases 5–8: piloto de 12 s (2026-11-27), aguardando a aprovação final
+
+- **Cenário em camadas** (`assets/backgrounds/forest/`): 4 imagens geradas, preparadas por `tools/key_layer.py` (recorte por distância à cor do fundo, para a folhagem verde não sumir; detecção da linha do caminho).
+- **Engine:**
+  - `engine/effects/fx.js`: raio, faíscas, partículas e brilho;
+  - `engine/lighting/light.js`: luz local só nos pixels do personagem, luz no chão e gradação;
+  - o rig respeita a câmera (antes desenhava em coordenadas absolutas);
+  - `loadImages({ canvas: true })` deixa os frames iguais em qualquer ordem.
+- **Piloto** (`demos/pilot-zeus/`): câmera por trecho, raio saindo do encaixe da mão, luz, vento e folhas, som com os mesmos eventos da imagem e build estrito.
+- **QA:** ver `demos/pilot-zeus/README.md`.
+
+**Próximo, depois da aprovação:** expandir para Xangô, Tupã e Thor e produzir o Panteões Ep. 04.

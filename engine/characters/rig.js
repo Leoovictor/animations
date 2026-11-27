@@ -71,6 +71,7 @@ export class Rig {
   // draw every bone image at its world matrix, in z order. images: { key: HTMLImageElement|Canvas }
   draw(g, pose, images, o = {}) {
     const F = this.compute(pose); g.save();
+    if (!o.base) { const m = g.getTransform(); if (!m.isIdentity) o = { ...o, base: [m.a, m.b, m.c, m.d, m.e, m.f] }; }   // respect a camera transform already on the context
     if (o.alpha != null) g.globalAlpha *= o.alpha;
     for (const id of this.order) {
       if (o.only && !o.only.includes(id)) continue;

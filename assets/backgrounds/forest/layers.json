@@ -1,0 +1,40 @@
+{
+ "_about": "How each generated layer is prepared by tools/key_layer.py. crop = [top, bottom] row fractions kept. mid/front are keyed by distance to the chroma colour so green-ish foliage survives. pathLine: find the top of the earthen path (where feet stand) and record it in layers/meta.json as a fraction of the prepared layer's height.",
+ "far": {
+  "key": false
+ },
+ "mid": {
+  "key": true,
+  "crop": [
+   0,
+   1
+  ],
+  "trim": true,
+  "bg": [
+   1,
+   174,
+   70
+  ]
+ },
+ "ground": {
+  "key": true,
+  "crop": [
+   0.58,
+   1
+  ],
+  "pathLine": true,
+  "bgRow": true,
+  "tol": [
+   30,
+   70
+  ]
+ },
+ "front": {
+  "key": true,
+  "bg": [
+   1,
+   174,
+   70
+  ]
+ }
+}

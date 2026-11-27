@@ -20,7 +20,7 @@ function render(t) {
 }
 (async () => {
   const m = await loadJSON('assets/characters/zeus/rig.json'), keys = new Set(m.bones.map(b => b.image)); for (const v of Object.values(m.variants || {})) for (const k of Object.values(v)) keys.add(k);
-  const imgs = await loadImages(Object.fromEntries([...keys].map(k => [k, 'assets/characters/zeus/' + k])));
+  const imgs = await loadImages(Object.fromEntries([...keys].map(k => [k, 'assets/characters/zeus/' + k])), { canvas: true });
   Z = act(new Character(new Rig(m), imgs));
   Z.clips = Z.clips.map(c => PILOT_CLIPS.find(p => p.action === c.action && p.start === c.start) ? Object.assign(PILOT_CLIPS.find(p => p.action === c.action && p.start === c.start), c) : c);
   window.DUR = 12; window.EV = []; window.render = render; window.TEXTS = () => [];
