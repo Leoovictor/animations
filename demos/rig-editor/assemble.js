@@ -7,7 +7,9 @@ export function assemble(plan, P) {
     else { const pp = P[pieceOf[b.parent]], tgt = b.at === 'pivot' ? pp.pivot : pp.attach[b.at], off = b.offset || [0, 0]; out.position = [tgt[0] - pp.pivot[0] + off[0], tgt[1] - pp.pivot[1] + off[1]]; }
     if (b.limits) out.limits = b.limits; if ((b.scale ?? 1) !== 1) out.scale = b.scale; return out;
   });
-  const sockets = Object.fromEntries(Object.entries(plan.sockets).map(([k, [bone, i, off = [0, 0]]]) => { const a = P[pieceOf[bone]].attach[i]; return [k, { bone, at: [a[0] + off[0], a[1] + off[1]] }]; }));
+  const sockets = Object.fromEntries(Object.entries(plan.sockets).map(([k, [bone, i, off = [0, 0]]]) => { const a = P[pieceOf[bone]].attach[i]; let o = [...off];
+    for (const ch of plan.bones) if (ch.parent === bone && ch.at === i && ch.offset) o = [o[0] + ch.offset[0], o[1] + ch.offset[1]];   // follows a nudged child (ankle ← foot)
+    return [k, { bone, at: [a[0] + o[0], a[1] + o[1]] }]; }));
   const variants = Object.fromEntries(Object.entries(plan.variants || {}).map(([bone, m]) => [bone, Object.fromEntries(Object.entries(m).map(([k, v]) => [k, 'parts/' + v + '.png']))]));
   return { view: plan.view, viewScale: plan.viewScale ?? 1, reference: plan.reference, bones, sockets, variants, chains: plan.chains || {}, soles: plan.soles || {} };
 }

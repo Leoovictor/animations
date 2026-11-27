@@ -13,7 +13,9 @@ for b in plan['bones']:
     if b.get('scale', 1) != 1: out['scale'] = b['scale']
     bones.append(out)
 def sock(v):
-    bone, i = v[0], v[1]; at = P[pieceOf[bone]]['attach'][i]; off = v[2] if len(v) > 2 else [0, 0]
+    bone, i = v[0], v[1]; at = P[pieceOf[bone]]['attach'][i]; off = list(v[2]) if len(v) > 2 else [0, 0]
+    for ch in plan['bones']:   # a socket on an attach point follows the piece hung there (e.g. the ankle follows a nudged foot)
+        if ch.get('parent') == bone and ch.get('at') == i and ch.get('offset'): off = [off[0] + ch['offset'][0], off[1] + ch['offset'][1]]
     return {'bone': bone, 'at': [round(at[0] + off[0], 1), round(at[1] + off[1], 1)]}
 sockets = {k: sock(v) for k, v in plan['sockets'].items()}
 variants = {bone: {k: 'parts/' + v + '.png' for k, v in m.items()} for bone, m in plan.get('variants', {}).items()}
