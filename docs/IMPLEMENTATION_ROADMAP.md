@@ -8,7 +8,7 @@ Status das fases:
 | 1 | guia v1 escrito (`docs/MYTHOLOGY_CHIBI_STYLE.md`), proporções chibi aprovadas; **imagem de referência do jogo ainda pendente** |
 | 2 (engine compartilhada) | **itens 1–3 feitos**; itens 6 e 7 com a parte de código pronta, testada num rig placeholder |
 | 3 (assets e rig do Zeus) | **aprovada** (1ª aprovação visual, `assets/characters/zeus/preview.jpg`) |
-| 4 (movimentos do piloto) | **refeita com o rig v2 (perfil); aguardando a 2ª aprovação visual** (`demos/clips`, `out/galeria.mp4`) |
+| 4 (movimentos do piloto) | **aprovada em 2026-11-27** (rig v2 em perfil, tornozelo com pé plano, passada simples, ajustes finos do usuário no editor) |
 | 5 a 8 | não iniciadas |
 
 ## Progresso (2026-11-26)
@@ -113,3 +113,18 @@ Esforço estimado: P (pequeno, até ~2 h), M (meio dia), G (1–2 dias). As esti
 **Limitações:**
 - A mão é sempre o punho, porque a edição só gerou o punho.
 - Ainda há um leve borrão onde estavam alguns marcadores (base do pescoço, tampa do cotovelo).
+
+
+## 2ª aprovação visual (2026-11-27)
+
+O usuário aprovou o Zeus e os movimentos ("está perfeito agora").
+
+**Mudanças desde a revisão v2:**
+- toco de pescoço removido do tronco e encurtado na cabeça;
+- antebraço de trás com o punho visto por dentro (nova peça a partir da foto de referência);
+- bolinhas sob as sandálias removidas;
+- tornozelo: a canela foi dividida em perna e pé, e o pé fica sempre plano;
+- passada simplificada;
+- editor de encaixe (`demos/rig-editor`), com os ajustes finos feitos pelo usuário.
+
+**Próximo:** itens 9–12 (cenário da floresta em camadas, raio a partir do socket da mão, luz local, partículas e vento, câmera, áudio e o piloto de 12 s).
