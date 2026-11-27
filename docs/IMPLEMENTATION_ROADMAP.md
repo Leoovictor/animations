@@ -130,7 +130,7 @@ O usuário aprovou o Zeus e os movimentos ("está perfeito agora").
 **Próximo:** itens 9–12 (cenário da floresta em camadas, raio a partir do socket da mão, luz local, partículas e vento, câmera, áudio e o piloto de 12 s).
 
 
-## Fases 5–8: piloto de 12 s (2026-11-27), aguardando a aprovação final
+## Fases 5–8: piloto de 12 s (2026-11-27), aprovado pelo usuário
 
 - **Cenário em camadas** (`assets/backgrounds/forest/`): 4 imagens geradas, preparadas por `tools/key_layer.py` (recorte por distância à cor do fundo, para a folhagem verde não sumir; detecção da linha do caminho).
 - **Engine:**
